@@ -1,80 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Saberes Interculturais de Itaparica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Saberes Interculturais dos Povos Indígenas de Itaparica</title>
+    <!-- Google Fonts -->
+    <link href="[https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@500;700;800&display=swap](https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@500;700;800&display=swap)" rel="stylesheet">
+    <!-- Ícones Lucide -->
+    <script src="[https://unpkg.com/lucide@latest](https://unpkg.com/lucide@latest)"></script>
+    <!-- Link para o CSS Externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Saberes Interculturais dos Povos Indígenas de Itaparica</h1>
-    <p>Práticas corporais, cultura e educação física em diálogo intercultural</p>
-</header>
+    <header>
+        <nav>
+            <div class="logo">
+                <i data-lucide="feather" size="28"></i>
+                <span>SABERES DE ITAPARICA</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projeto">O Projeto</a></li>
+                <li><a href="#praticas">Saberes & Práticas</a></li>
+                <li><a href="#galeria">Vivências</a></li>
+                <li><a href="#producao">Publicações</a></li>
+                <li><a href="#sobre">Quem Somos</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-toggle">
+                <i data-lucide="menu" size="28"></i>
+            </div>
+        </nav>
+    </header>
 
-<nav>
-    <a href="#projeto">O Projeto</a>
-    <a href="#praticas">Práticas Corporais</a>
-    <a href="#artigo">Artigo</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#sobre">Sobre</a>
-</nav>
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <h1>SABERES INTERCULTURAIS<br><span class="subtitle-hero">dos Povos Indígenas de Itaparica</span></h1>
+        <p>Ancestralidade, Corpo e Movimento na Terra do Rio São Francisco.</p>
+        <a href="#projeto" class="btn">Conhecer o Projeto</a>
+    </section>
 
-<section id="projeto">
-    <h2>O Projeto</h2>
-    <p>
-        Fui bolsista de projeto no âmbito do CNPq, integrando a iniciativa
-        <strong>“Saberes Interculturais dos Povos Indígenas de Itaparica”</strong>,
-        desenvolvida no Instituto Federal do Sertão Pernambucano.
-    </p>
-    <p>
-        O projeto teve como objetivo valorizar, reconhecer e incorporar os saberes
-        tradicionais indígenas às práticas pedagógicas da Educação Física,
-        promovendo o diálogo entre conhecimentos acadêmicos e saberes tradicionais.
-    </p>
-</section>
+    <div class="tribal-divider"></div>
 
-<section id="praticas" class="destaque">
-    <h2>Práticas Corporais Indígenas</h2>
-    <ul>
-        <li>Toré</li>
-        <li>Caça tradicional</li>
-        <li>Futebol no contexto indígena</li>
-        <li>Jogos, danças e rituais</li>
-    </ul>
-</section>
+    <!-- Seção O Projeto -->
+    <section id="projeto">
+        <h2 class="section-title">O Território e o Projeto</h2>
+        <div class="project-content">
+            <div class="project-text">
+                <p>O projeto <strong>“Saberes Interculturais dos Povos Indígenas de Itaparica”</strong> nasce do encontro entre a academia e a aldeia. Sediado no <strong>Instituto Federal do Sertão Pernambucano</strong>, buscamos compreender como os saberes tradicionais dialogam com a modernidade sem perder sua essência.</p>
+                <br>
+                <p>Nossa missão é <strong>descolonizar o olhar</strong> sobre as práticas corporais. O corpo indígena não é apenas biológico; é um corpo-território que carrega a memória da caça, a pisada do Toré e a resistência nas margens do "Opará" (Rio São Francisco).</p>
+                <br>
+                <p class="quote">“A cultura não está guardada no museu, ela vive no corpo que dança.”</p>
+            </div>
+            <div class="project-badge">
+                <i data-lucide="sprout" size="60" class="badge-icon"></i>
+                <h4 class="badge-title">Pesquisa & Fomento</h4>
+                <div class="badge-separator"></div>
+                <p><small>Apoio Institucional:<br><strong>CNPq & IF Sertão-PE</strong></small></p>
+            </div>
+        </div>
+    </section>
 
-<section id="artigo">
-    <h2>Produção Científica</h2>
-    <p>
-        <strong>Práticas corporais do povo Pankará:</strong> o toré, a caça e o futebol
-        no sertão pernambucano.
-    </p>
-    <a href="https://gcorpo.wordpress.com/2025/09/15/praticas-corporais-do-povo-pankara-o-tore-a-caca-e-o-futebol-no-sertao-pernambucano/"
-    target="_blank" rel="noopener" class="botao">
-        Ler artigo completo
-    </a>
-</section>
+    <!-- Divisor gráfico SVG -->
+    <div class="svg-divider">
+        <svg width="100" height="20" viewBox="0 0 100 20">
+            <path d="M0 10 Q25 0 50 10 T100 10" fill="none" stroke="#b94e24" stroke-width="2"/>
+        </svg>
+    </div>
 
-<section id="galeria" class="destaque">
-    <h2>Galeria</h2>
-    <p>Registros das vivências, práticas corporais e atividades de campo.</p>
-    <!-- Imagens entram aqui -->
-</section>
+    <!-- Seção Práticas Corporais -->
+    <section id="praticas">
+        <h2 class="section-title">Saberes do Corpo</h2>
+        <div class="practices-grid">
+            <div class="card">
+                <div class="card-icon"><i data-lucide="music" size="32"></i></div>
+                <h3>O Toré Sagrado</h3>
+                <p>O bater dos pés no chão não é apenas dança, é a comunicação com os Encantados. O Toré reafirma a posse da terra e fortalece o espírito comunitário dos povos de Itaparica.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i data-lucide="target" size="32"></i></div>
+                <h3>Jogos Tradicionais</h3>
+                <p>Da corrida de tora ao arco e flecha, os jogos indígenas são escolas de vida. Eles ensinam foco, cooperação e respeito aos limites do corpo e da natureza.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i data-lucide="users" size="32"></i></div>
+                <h3>Futebol Indígena</h3>
+                <p>O futebol ressignificado. Nas aldeias, a competição cede lugar à celebração. O jogo torna-se um ritual moderno de encontro entre parentes de diferentes etnias.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i data-lucide="sun" size="32"></i></div>
+                <h3>Rituais e Lazer</h3>
+                <p>O lazer não é tempo perdido, é tempo ganho para a cultura. As festas, as pinturas corporais e as histórias contadas ao redor da fogueira mantêm a memória viva.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="sobre">
-    <h2>Sobre o Pesquisador</h2>
-    <p>
-        Desenvolvedor Full-Stack e pesquisador, com atuação em projetos de extensão,
-        cultura e educação intercultural, integrando tecnologia e produção acadêmica.
-    </p>
-</section>
+    <div class="tribal-divider"></div>
 
-<footer>
-    <p>Projeto financiado pelo CNPq • IF Sertão Pernambucano</p>
-</footer>
+    <!-- Seção Galeria -->
+    <section id="galeria" class="bg-white">
+        <h2 class="section-title">Registros Visuais</h2>
+        <p class="gallery-intro">Um olhar sobre as cores, texturas e movimentos que compõem o cotidiano e as celebrações.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="[https://images.unsplash.com/photo-1616092738596-3a25d202470f?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1616092738596-3a25d202470f?auto=format&fit=crop&w=600&q=80)" alt="Grafismo e Pintura"></div>
+            <div class="gallery-item"><img src="[https://images.unsplash.com/photo-1621888496150-138382d63795?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1621888496150-138382d63795?auto=format&fit=crop&w=600&q=80)" alt="Cestaria Artesanato"></div>
+            <div class="gallery-item"><img src="[https://images.unsplash.com/photo-1595279603098-46c5923982e9?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1595279603098-46c5923982e9?auto=format&fit=crop&w=600&q=80)" alt="Penas e Rituais"></div>
+            <div class="gallery-item"><img src="[https://images.unsplash.com/photo-1544983050-7f28ae92461f?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1544983050-7f28ae92461f?auto=format&fit=crop&w=600&q=80)" alt="Natureza Rio"></div>
+        </div>
+    </section>
 
-<script src="js/script.js"></script>
+    <!-- Seção Produção e Pesquisador -->
+    <section id="producao" class="bg-palha">
+        <h2 class="section-title">Produção Acadêmica</h2>
+        
+        <div class="article-card">
+            <div class="article-header">
+                <div>
+                    <h3 class="article-title">Artigo: Interculturalidade na Educação Física</h3>
+                    <p class="article-meta">Publicado nos Anais do Congresso de Iniciação Científica</p>
+                </div>
+                <a href="#" class="btn btn-small">Baixar PDF <i data-lucide="download" class="icon-download"></i></a>
+            </div>
+            <hr class="article-divider">
+            <p>Este estudo investiga como as práticas corporais indígenas podem ser inseridas no currículo escolar não como folclore, mas como conhecimento legítimo e necessário para a formação cidadã.</p>
+        </div>
+
+        <div id="sobre" class="researcher-profile">
+            <img src="[https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80](https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80)" alt="Pesquisadora" class="researcher-img">
+            <div class="researcher-bio">
+                <h3>O Pesquisador(a)</h3>
+                <p>Estudante de Educação Física do IF Sertão-PE, dedicada à pesquisa de campo e à valorização das raízes sertanejas e indígenas. Bolsista CNPq comprometida com a ciência cidadã.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Tribal -->
+    <footer>
+        <div class="tribal-divider footer-pattern"></div>
+        <div class="footer-content">
+            <div class="logos-footer">
+                <span>IF SERTÃO-PE</span>
+                <span>CNPq</span>
+                <span>MCTI</span>
+            </div>
+            <p class="copyright">&copy; 2024 - Projeto Saberes de Itaparica</p>
+            <p class="footer-note">Feito com respeito e ancestralidade.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para Galeria -->
+    <div id="modal">
+        <img id="modal-img" src="" alt="Ampliada">
+        <div class="modal-close-text">Clique fora para fechar</div>
+    </div>
+
+    <!-- Link para o Script JavaScript Externo -->
+    <script src="script.js"></script>
 </body>
 </html>
