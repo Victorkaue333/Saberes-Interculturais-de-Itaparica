@@ -64,7 +64,7 @@ h1, h2, h3, h4 {
 }
 
 /* =========================
-   HEADER BOOTSTRAP NAVBAR
+HEADER BOOTSTRAP NAVBAR
 ========================= */
 header.fixed-top {
     background-color: #2c2c2c;
@@ -157,7 +157,7 @@ header.scrolled {
 }
 
 /* =========================
-   SECTIONS
+SECTIONS
 ========================= */
 section {
     padding: 100px 20px;
@@ -649,7 +649,7 @@ footer {
 }
 
 /* =========================
-   MODAL DA GALERIA
+MODAL DA GALERIA
 ========================= */
 #modal {
     display: none;
@@ -677,7 +677,7 @@ footer {
 }
 
 /* =========================
-   BOTÃO VOLTAR AO TOPO
+BOTÃO VOLTAR AO TOPO
 ========================= */
 .btn-voltar-topo {
     position: fixed;
@@ -718,7 +718,7 @@ footer {
 }
 
 /* =========================
-   ANIMAÇÕES E INTERAÇÕES
+ANIMAÇÕES E INTERAÇÕES
 ========================= */
 /* Animação fade-in para seções (opcional - comentado para evitar problemas iniciais) */
 /*
@@ -744,7 +744,7 @@ img:hover {
 }
 
 /* =========================
-   RESPONSIVIDADE MOBILE-FIRST
+RESPONSIVIDADE MOBILE-FIRST
 ========================= */
 /* Mobile (< 768px) - Padrão */
 @media (max-width: 767.98px) {
@@ -916,7 +916,7 @@ img:hover {
 }
 
 /* =========================
-   UTILITÁRIOS BOOTSTRAP OVERRIDE
+UTILITÁRIOS BOOTSTRAP OVERRIDE
 ========================= */
 /* Garantir img-fluid funciona */
 .img-fluid {
