@@ -83,6 +83,11 @@ nav {
     gap: 12px;
 }
 
+.logo-icon {
+    font-size: 1.8rem;
+    color: var(--color-urucum);
+}
+
 .logo i {
     color: var(--color-urucum);
 }
