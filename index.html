@@ -13,6 +13,8 @@
 </head>
 <body>
 
+    <!-- Conteúdo principal (tudo exceto footer) -->
+    <main class="main-wrapper">
     <header>
         <nav>
             <div class="logo">
@@ -157,25 +159,53 @@
         </div>
     </section>
 
-    <!-- Footer Tribal -->
-    <footer>
-        <div class="tribal-divider footer-pattern"></div>
-        <div class="footer-content">
-            <div class="logos-footer">
-                <span>IF SERTÃO-PE</span>
-                <span>CNPq</span>
-                <span>MCTI</span>
-            </div>
-            <p class="copyright">&copy; 2024 - Projeto Saberes de Itaparica</p>
-            <p class="footer-note">Feito com respeito e ancestralidade.</p>
-        </div>
-    </footer>
-
     <!-- Modal para Galeria -->
     <div id="modal">
         <img id="modal-img" src="" alt="Ampliada">
         <div class="modal-close-text">Clique fora para fechar</div>
     </div>
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- Footer Profissional -->
+    <footer>
+        <div class="tribal-divider footer-pattern"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Coluna 1: Sobre -->
+                <div class="footer-column">
+                    <h4>Sobre o Projeto</h4>
+                    <p>Saberes Interculturais dos Povos Indígenas de Itaparica - Valorizando práticas corporais, cultura e ancestralidade.</p>
+                </div>
+                
+                <!-- Coluna 2: Navegação -->
+                <div class="footer-column">
+                    <h4>Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projeto">O Projeto</a></li>
+                        <li><a href="#praticas">Saberes & Práticas</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 3: Apoio -->
+                <div class="footer-column">
+                    <h4>Apoio Institucional</h4>
+                    <div class="footer-badges">
+                        <span class="badge-footer">IF SERTÃO-PE</span>
+                        <span class="badge-footer">CNPq</span>
+                        <span class="badge-footer">MCTI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 - Projeto Saberes Interculturais de Itaparica</p>
+                <p class="footer-note">Feito com respeito à ancestralidade e aos saberes tradicionais</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Link para o Script JavaScript Externo -->
     <script src="js/script.js"></script>
