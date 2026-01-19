@@ -103,3 +103,63 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
+
+// ====================
+// MENU ATIVO BASEADO NA SEÇÃO VISÍVEL
+// ====================
+
+/**
+ * Sistema de detecção de seção ativa:
+ * - Detecta qual seção está mais próxima do topo da viewport
+ * - Aplica a classe 'btn-nav' ao link correspondente à seção ativa
+ * - Atualiza dinamicamente conforme o usuário faz scroll
+ */
+
+// Função para atualizar o menu ativo
+function atualizarMenuAtivo() {
+    const scrollPos = window.scrollY + 150; // Offset do header fixo
+    
+    // Obtém todas as seções
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
+    
+    // Encontra qual seção está atualmente visível
+    let secaoAtiva = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        // Verifica se a posição do scroll está dentro desta seção
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            secaoAtiva = section.getAttribute('id');
+        }
+    });
+    
+    // Se chegou ao final da página, ativa a última seção
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        const ultimaSecao = sections[sections.length - 1];
+        secaoAtiva = ultimaSecao.getAttribute('id');
+    }
+    
+    // Remove btn-nav de todos os links
+    navLinks.forEach(link => {
+        link.classList.remove('btn-nav');
+    });
+    
+    // Adiciona btn-nav ao link ativo
+    if (secaoAtiva) {
+        const linkAtivo = document.querySelector(`.nav-link[data-section="${secaoAtiva}"]`);
+        if (linkAtivo) {
+            linkAtivo.classList.add('btn-nav');
+        }
+    }
+}
+
+// Atualiza o menu ao fazer scroll
+window.addEventListener('scroll', atualizarMenuAtivo);
+
+// Define o menu ativo ao carregar a página
+window.addEventListener('DOMContentLoaded', () => {
+    atualizarMenuAtivo();
+});
