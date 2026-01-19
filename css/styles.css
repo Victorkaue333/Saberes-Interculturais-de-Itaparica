@@ -63,37 +63,46 @@ h1, h2, h3, h4 {
     opacity: 0.9;
 }
 
-/* --- Header --- */
-header {
+/* =========================
+   HEADER BOOTSTRAP NAVBAR
+========================= */
+header.fixed-top {
     background-color: #2c2c2c;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    position: fixed;
+    /* Centralizado e flutuante */
     width: calc(100% - 40px);
     max-width: 1400px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 20px;
-    z-index: 1000;
+    margin: 20px auto 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
     border-radius: 12px;
     border-bottom: 3px solid var(--color-urucum);
+    transition: var(--transition);
+    position: fixed;
 }
 
-nav {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 1.2rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header.scrolled {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 
-.logo {
+/* Navbar customizada */
+.navbar {
+    padding: 0.8rem 0;
+}
+
+.navbar-brand.logo {
     font-weight: 800;
-    color: #ffffff;
+    color: #ffffff !important;
     font-size: 1.3rem;
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
+}
+
+.navbar-brand.logo:hover {
+    color: var(--color-urucum) !important;
 }
 
 .logo-icon {
@@ -101,75 +110,89 @@ nav {
     color: var(--color-urucum);
 }
 
-.logo i {
-    color: var(--color-urucum);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
+/* Links da navegação */
+.navbar-nav .nav-link {
+    color: #ffffff !important;
     font-size: 0.9rem;
     font-weight: 600;
-    position: relative;
-    transition: var(--transition);
-    padding: 8px 16px;
+    padding: 8px 16px !important;
     border-radius: 4px;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-urucum);
     transition: var(--transition);
+    font-family: var(--font-title);
 }
 
-.nav-links a:hover {
-    color: var(--color-urucum);
-}
-.nav-links a:hover::after {
-    width: 80%;
+.navbar-nav .nav-link:hover {
+    color: var(--color-urucum) !important;
+    background-color: rgba(185, 78, 36, 0.1);
 }
 
-/* Botão destaque na navegação */
-.btn-nav {
+/* Botão Home destacado */
+.navbar-nav .btn-nav {
     background-color: var(--color-urucum) !important;
     color: #ffffff !important;
     padding: 10px 28px !important;
     border-radius: 6px !important;
     font-weight: 700 !important;
-    transition: var(--transition) !important;
+    margin-left: 0;
 }
 
-.btn-nav::after {
-    display: none !important;
-}
-
-.btn-nav:hover {
+.navbar-nav .btn-nav:hover {
     background-color: #d35f2f !important;
-    color: #ffffff !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(185, 78, 36, 0.4);
 }
 
-.mobile-menu { display: none; cursor: pointer; color: var(--color-urucum); }
+/* Botão hambúrguer customizado */
+.navbar-toggler {
+    border: 2px solid var(--color-urucum);
+    padding: 0.5rem 0.75rem;
+}
 
-/* --- Sections --- */
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(185, 78, 36, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(185, 78, 36, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* =========================
+   SECTIONS
+========================= */
 section {
     padding: 100px 20px;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+}
+
+/* Seções fullwidth - ocupam 100% da tela */
+.section-fullwidth {
+    max-width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 100px 0;
+}
+
+.section-fullwidth .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Background das seções */
+.bg-white {
+    background-color: #ffffff;
+}
+
+.bg-palha {
+    background-color: var(--color-palha);
+}
+
+/* Divider tribal fullwidth */
+.tribal-divider {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
 
 /* --- Hero Section --- */
@@ -625,16 +648,9 @@ footer {
     color: var(--color-palha);
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-    .nav-links { display: none; }
-    .mobile-menu { display: block; }
-    .project-content { flex-direction: column; padding: 25px; }
-    section { padding: 60px 20px; }
-}
-
-/* Modal */
+/* =========================
+   MODAL DA GALERIA
+========================= */
 #modal {
     display: none;
     position: fixed;
@@ -645,6 +661,7 @@ footer {
     align-items: center;
     padding: 20px;
 }
+
 #modal img { 
     max-width: 100%; 
     max-height: 85vh; 
@@ -657,4 +674,267 @@ footer {
     position: absolute;
     bottom: 20px;
     font-family: var(--font-title);
+}
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
+.btn-voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-urucum);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(185, 78, 36, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    z-index: 1040;
+}
+
+.btn-voltar-topo.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-voltar-topo:hover {
+    background-color: var(--color-terra);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(185, 78, 36, 0.6);
+}
+
+.btn-voltar-topo:active {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   ANIMAÇÕES E INTERAÇÕES
+========================= */
+/* Animação fade-in para seções (opcional - comentado para evitar problemas iniciais) */
+/*
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+*/
+
+/* Transições suaves para imagens */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* =========================
+   RESPONSIVIDADE MOBILE-FIRST
+========================= */
+/* Mobile (< 768px) - Padrão */
+@media (max-width: 767.98px) {
+    /* Header mobile */
+    header {
+        width: calc(100% - 20px);
+        top: 10px;
+        border-radius: 8px;
+    }
+    
+    .navbar-brand.logo {
+        font-size: 1.1rem;
+    }
+    
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+    
+    /* Navbar collapse mobile */
+    .navbar-collapse {
+        background-color: rgba(44, 44, 44, 0.98);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 12px 16px !important;
+        border-radius: 6px;
+    }
+    
+    .navbar-nav .btn-nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    /* Hero mobile */
+    .hero {
+        height: 100vh;
+        padding-top: 80px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 15px;
+    }
+    
+    .subtitle-hero {
+        font-size: 0.65em;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+    
+    /* Seções mobile */
+    section {
+        padding: 60px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Project content mobile */
+    .project-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .project-badge {
+        margin-top: 2rem;
+    }
+    
+    /* Cards mobile */
+    .practices-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    /* Team container mobile */
+    .team-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Footer mobile */
+    .footer-container {
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .footer-badges {
+        align-items: center;
+    }
+    
+    /* Botão voltar ao topo mobile */
+    .btn-voltar-topo {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Tablet (768px - 1199.98px) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    header {
+        width: calc(100% - 30px);
+        top: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .practices-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    section {
+        padding: 80px 30px;
+    }
+}
+
+/* Desktop (≥ 1200px) */
+@media (min-width: 1200px) {
+    .navbar-nav {
+        gap: 5px;
+    }
+    
+    .navbar-nav .btn-nav {
+        margin-left: 10px;
+    }
+}
+
+/* Ajuste para telas muito grandes */
+@media (min-width: 1600px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* =========================
+   UTILITÁRIOS BOOTSTRAP OVERRIDE
+========================= */
+/* Garantir img-fluid funciona */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container responsivo */
+.container-custom {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+    .container-custom {
+        max-width: 1140px;
+    }
 }

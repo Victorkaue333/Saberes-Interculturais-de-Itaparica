@@ -1,38 +1,74 @@
 // Inicializa os ícones da biblioteca Lucide
 lucide.createIcons();
 
-// Rolagem suave para links internos
+// ====================
+// ROLAGEM SUAVE PARA LINKS INTERNOS
+// ====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // Scroll suave com offset para compensar header fixo
+            const headerOffset = 100;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Fechar menu mobile após clicar (Bootstrap)
+            const navbarCollapse = document.getElementById('navbarNav');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: true
+                });
+            }
+        }
     });
 });
 
-// Menu Mobile Toggle
-const mobileToggle = document.getElementById('mobile-toggle');
-const navLinks = document.querySelector('.nav-links');
+// ====================
+// BOTÃO VOLTAR AO TOPO
+// ====================
+const btnVoltarTopo = document.getElementById('btnVoltarTopo');
 
-mobileToggle.addEventListener('click', () => {
-    if (navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
+// Mostrar/ocultar botão baseado no scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        btnVoltarTopo.classList.add('show');
     } else {
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '70px';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.backgroundColor = 'var(--color-palha)';
-        navLinks.style.padding = '2rem';
-        navLinks.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+        btnVoltarTopo.classList.remove('show');
+    }
+    
+    // Efeito de rolagem no cabeçalho
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
 });
 
-// Funcionalidade do Modal da Galeria
+// Ação do botão voltar ao topo
+btnVoltarTopo.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// ====================
+// MODAL DA GALERIA
+// ====================
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modal-img');
 
+// Abrir modal ao clicar em imagens da galeria
 document.querySelectorAll('.gallery-item img').forEach(img => {
     img.addEventListener('click', () => {
         modal.style.display = 'flex';
@@ -41,17 +77,29 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
 });
 
 // Fechar modal ao clicar fora
-modal.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+if (modal) {
+    modal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
 
-// Efeito de rolagem no cabeçalho
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.style.padding = '0.5rem 0';
-        header.style.borderBottom = '4px solid var(--color-urucum)';
-    } else {
-        header.style.padding = '1.2rem 0';
-    }
+// ====================
+// ANIMAÇÕES AO SCROLL (Interseção Observer)
+// ====================
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+        }
+    });
+}, observerOptions);
+
+// Observar seções para animação
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
 });
