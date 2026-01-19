@@ -168,7 +168,7 @@ section {
     align-items: center;
     text-align: center;
     background: linear-gradient(rgba(26, 26, 26, 0.6), rgba(185, 78, 36, 0.4)), 
-                url('[https://images.unsplash.com/photo-1596395811776-87e0766d4002?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80](https://images.unsplash.com/photo-1596395811776-87e0766d4002?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)');
+                url('../assets/images/terra_background.png');
     background-size: cover;
     background-position: center bottom;
     color: var(--color-palha);
