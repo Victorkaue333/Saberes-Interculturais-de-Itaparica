@@ -26,6 +26,7 @@ O projeto teve como objetivo valorizar, reconhecer e incorporar os saberes tradi
 - CSS3
 - JavaScript
 - Design responsivo
+- Bootstrap
 
 ## 📂 Estrutura do Projeto
 
