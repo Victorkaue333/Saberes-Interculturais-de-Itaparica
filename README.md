@@ -4,7 +4,7 @@ Site de divulgação do projeto **"Saberes Interculturais dos Povos Indígenas d
 
 ## 📋 Sobre o Projeto
 
-O projeto teve como objetivo valorizar, reconhecer e incorporar os saberes tradicionais indígenas às práticas pedagógicas da Educação Física, promovendo o diálogo entre conhecimentos acadêmicos e saberes tradicionais dos povos indígenas de Itaparica.
+O projeto teve como objetivo valorizar, reconhecer e incorporar os saberes tradicionais indígenas às práticas pedagógicas da Educação Física, promovendo o diálogo entre conhecimentos acadêmicos e saberes tradicionais dos povos indígenas de Itaparica precisamente localizado em Itacuruba - Pe.
 
 ### Práticas Corporais Estudadas
 
