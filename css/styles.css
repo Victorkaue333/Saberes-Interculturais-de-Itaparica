@@ -614,6 +614,20 @@ footer {
     align-items: flex-start;
 }
 
+.instituicao-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: var(--transition);
+}
+
+.instituicao-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 .badge-footer {
     font-family: var(--font-title);
     font-weight: 700;
