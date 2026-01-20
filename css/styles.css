@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 :root {
     /* Nova Paleta: Urucum, Genipapo, Terra e Palha */
     --color-urucum: #b94e24; /* Terracota/Laranja queimado vibrante */
@@ -10,6 +12,7 @@
     --color-bg-body: #fbf7ef;
     --font-main: 'Lora', serif;
     --font-title: 'Montserrat', sans-serif;
+    --font-decorative: 'Allura', cursive;
     --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -92,13 +95,15 @@ header.scrolled {
 }
 
 .navbar-brand.logo {
-    font-weight: 800;
+    font-weight: 400;
     color: #ffffff !important;
-    font-size: 1.3rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    font-family: var(--font-decorative);
+    text-transform: none;
 }
 
 .navbar-brand.logo:hover {
