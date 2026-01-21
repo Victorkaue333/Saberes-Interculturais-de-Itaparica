@@ -1,6 +1,6 @@
 # 🌿 Saberes Interculturais de Itaparica
 
-Site de divulgação do projeto de extensão **"Saberes Interculturais dos Povos Indígenas de Itaparica"**, desenvolvido no âmbito do CNPq e Instituto Federal do Sertão Pernambucano (IF Sertão-PE).
+Site de divulgação do projeto de extensão cujo o nome é: **"Saberes Interculturais dos Povos Indígenas de Itaparica: Práticas Corporais e de Lazer no Ensino da Educação Física do Instituto Federal do Sertão Pernambucano"**, desenvolvido no âmbito do CNPq e Instituto Federal do Sertão Pernambucano (IF Sertão-PE).
 
 ## 📋 Sobre o Projeto
 
