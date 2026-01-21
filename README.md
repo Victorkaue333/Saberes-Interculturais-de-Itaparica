@@ -8,10 +8,10 @@ O projeto teve como objetivo valorizar, reconhecer e incorporar os saberes tradi
 
 ### Práticas Corporais Estudadas
 
-- **Toré**: Dança ritual de grande importância cultural
-- **Caça tradicional**: Práticas ancestrais de subsistência
-- **Futebol no contexto indígena**: Ressignificação cultural do esporte
-- **Jogos, danças e rituais**: Manifestações culturais tradicionais
+- **Toré**: Dança ritual de grande importância cultural;
+- **Caça tradicional**: Práticas ancestrais de subsistência;
+- **Futebol no contexto indígena**: Ressignificação cultural do esporte;
+- **Jogos, danças e rituais**: Manifestações culturais tradicionais;
 
 ## 🎯 Objetivos
 
