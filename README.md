@@ -61,6 +61,8 @@ saberes-interculturais-itaparica/
 
 ## 8. ▶️ Como executar o projeto localmente
 
+O processo para rodar o projeto localmente é simples e pode ser feito de várias formas. Siga os passos abaixo:
+
 1. Clone o repositório:
 
    ```bash
