@@ -1,165 +1,411 @@
-// Inicializa os ícones da biblioteca Lucide
-lucide.createIcons();
+(() => {
+    "use strict";
 
-// ====================
-// ROLAGEM SUAVE PARA LINKS INTERNOS
-// ====================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            // Scroll suave com offset para compensar header fixo
-            const headerOffset = 100;
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const siteHeader = document.querySelector(".site-header");
+    const navLinks = Array.from(document.querySelectorAll(".navbar-nav .nav-link"));
+    const collapseElement = document.getElementById("mainNav");
+    const backToTop = document.getElementById("backToTop");
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-            
-            // Fechar menu mobile após clicar (Bootstrap)
-            const navbarCollapse = document.getElementById('navbarNav');
-            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: true
-                });
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    const currentYear = document.getElementById("currentYear");
+
+    if (currentYear) {
+        currentYear.textContent = String(new Date().getFullYear());
+    }
+
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
+        window.lucide.createIcons();
+    }
+
+    function getHeaderOffset() {
+        const navShell = document.querySelector(".nav-shell");
+        return (navShell ? navShell.offsetHeight : 80) + 22;
+    }
+
+    function syncScrollPadding() {
+        document.documentElement.style.scrollPaddingTop = `${getHeaderOffset()}px`;
+    }
+
+    syncScrollPadding();
+    window.addEventListener("resize", syncScrollPadding);
+
+    function closeMobileMenu() {
+        if (!collapseElement || !collapseElement.classList.contains("show")) {
+            return;
+        }
+        if (window.bootstrap && window.bootstrap.Collapse) {
+            window.bootstrap.Collapse.getOrCreateInstance(collapseElement).hide();
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (event) => {
+            const targetId = anchor.getAttribute("href");
+            if (!targetId || targetId === "#") {
+                return;
             }
-        }
+            const target = document.querySelector(targetId);
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset() + 2;
+            window.scrollTo({
+                top: targetTop,
+                behavior: prefersReducedMotion ? "auto" : "smooth"
+            });
+
+            closeMobileMenu();
+        });
     });
-});
 
-// ====================
-// BOTÃO VOLTAR AO TOPO
-// ====================
-const btnVoltarTopo = document.getElementById('btnVoltarTopo');
+    if (navLinks.length) {
+        const sections = Array.from(document.querySelectorAll("main section[id]"));
+        if ("IntersectionObserver" in window) {
+            const activeObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+                        const id = entry.target.id;
+                        const navTargetId = id === "territorio" ? "projeto" : id === "instituicoes" ? "equipe" : id;
+                        navLinks.forEach((link) => {
+                            const isActive = link.getAttribute("href") === `#${navTargetId}`;
+                            link.classList.toggle("active", isActive);
+                        });
+                    });
+                },
+                {
+                    rootMargin: "-45% 0px -45% 0px",
+                    threshold: 0
+                }
+            );
 
-// Mostrar/ocultar botão baseado no scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        btnVoltarTopo.classList.add('show');
+            sections.forEach((section) => activeObserver.observe(section));
+        }
+    }
+
+    let ticking = false;
+
+    function onScroll() {
+        const y = window.scrollY;
+        if (siteHeader) {
+            siteHeader.classList.toggle("scrolled", y > 20);
+        }
+        if (backToTop) {
+            backToTop.classList.toggle("show", y > 480);
+        }
+        ticking = false;
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                window.requestAnimationFrame(onScroll);
+                ticking = true;
+            }
+        },
+        { passive: true }
+    );
+    onScroll();
+
+    if (backToTop) {
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: prefersReducedMotion ? "auto" : "smooth"
+            });
+        });
+    }
+
+    const revealElements = Array.from(document.querySelectorAll(".reveal"));
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => element.classList.add("is-visible"));
     } else {
-        btnVoltarTopo.classList.remove('show');
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                });
+            },
+            {
+                threshold: 0.16,
+                rootMargin: "0px 0px -10% 0px"
+            }
+        );
+
+        revealElements.forEach((element) => revealObserver.observe(element));
     }
-    
-    // Efeito de rolagem no cabeçalho
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
 
-// Ação do botão voltar ao topo
-btnVoltarTopo.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    document.querySelectorAll(".knowledge-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            if (!targetId) {
+                return;
+            }
+
+            const detail = document.getElementById(targetId);
+            if (!detail) {
+                return;
+            }
+
+            const expanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!expanded));
+            detail.hidden = expanded;
+            button.textContent = expanded ? "Ler mais" : "Recolher";
+        });
     });
-});
 
-// ====================
-// MODAL DA GALERIA
-// ====================
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
+    let previouslyFocusedElement = null;
 
-// Abrir modal ao clicar em imagens da galeria
-document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-    });
-});
-
-// Fechar modal ao clicar fora
-if (modal) {
-    modal.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-}
-
-// ====================
-// ANIMAÇÕES AO SCROLL (Interseção Observer)
-// ====================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+    function openLightbox(imageSource, altText, captionText) {
+        if (!lightbox || !lightboxImage || !lightboxCaption) {
+            return;
         }
-    });
-}, observerOptions);
 
-// Observar seções para animação
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});
+        previouslyFocusedElement = document.activeElement;
+        lightboxImage.src = imageSource;
+        lightboxImage.alt = altText || "Registro ampliado";
+        lightboxCaption.textContent = captionText || altText || "Registro visual";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
 
-// ====================
-// MENU ATIVO BASEADO NA SEÇÃO VISÍVEL
-// ====================
-
-/**
- * Sistema de detecção de seção ativa:
- * - Detecta qual seção está mais próxima do topo da viewport
- * - Aplica a classe 'btn-nav' ao link correspondente à seção ativa
- * - Atualiza dinamicamente conforme o usuário faz scroll
- */
-
-// Função para atualizar o menu ativo
-function atualizarMenuAtivo() {
-    const scrollPos = window.scrollY + 150; // Offset do header fixo
-    
-    // Obtém todas as seções
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link[data-section]');
-    
-    // Encontra qual seção está atualmente visível
-    let secaoAtiva = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        
-        // Verifica se a posição do scroll está dentro desta seção
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-            secaoAtiva = section.getAttribute('id');
-        }
-    });
-    
-    // Se chegou ao final da página, ativa a última seção
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-        const ultimaSecao = sections[sections.length - 1];
-        secaoAtiva = ultimaSecao.getAttribute('id');
-    }
-    
-    // Remove btn-nav de todos os links
-    navLinks.forEach(link => {
-        link.classList.remove('btn-nav');
-    });
-    
-    // Adiciona btn-nav ao link ativo
-    if (secaoAtiva) {
-        const linkAtivo = document.querySelector(`.nav-link[data-section="${secaoAtiva}"]`);
-        if (linkAtivo) {
-            linkAtivo.classList.add('btn-nav');
+        if (lightboxClose) {
+            lightboxClose.focus();
         }
     }
-}
 
-// Atualiza o menu ao fazer scroll
-window.addEventListener('scroll', atualizarMenuAtivo);
+    function closeLightbox() {
+        if (!lightbox || !lightboxImage) {
+            return;
+        }
 
-// Define o menu ativo ao carregar a página
-window.addEventListener('DOMContentLoaded', () => {
-    atualizarMenuAtivo();
-});
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.src = "";
+        document.body.style.overflow = "";
+
+        if (previouslyFocusedElement instanceof HTMLElement) {
+            previouslyFocusedElement.focus();
+        }
+    }
+
+    document.querySelectorAll(".masonry-item").forEach((item) => {
+        item.setAttribute("tabindex", "0");
+
+        const openFromItem = () => {
+            const image = item.querySelector("img");
+            if (!image) {
+                return;
+            }
+            const caption = item.getAttribute("data-caption") || image.alt;
+            openLightbox(image.src, image.alt, caption);
+        };
+
+        item.addEventListener("click", openFromItem);
+        item.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openFromItem();
+            }
+        });
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener("click", closeLightbox);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && lightbox && lightbox.classList.contains("open")) {
+            closeLightbox();
+        }
+    });
+
+    document.querySelectorAll(".copy-citation").forEach((button) => {
+        const defaultLabel = button.textContent || "Copiar citação";
+
+        button.addEventListener("click", async () => {
+            const citation = button.getAttribute("data-citation") || "";
+            if (!citation.trim()) {
+                return;
+            }
+
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(citation);
+                    button.textContent = "Citação copiada";
+                } else {
+                    button.textContent = "Copie manualmente";
+                }
+            } catch (error) {
+                button.textContent = "Não foi possível copiar";
+            }
+
+            window.setTimeout(() => {
+                button.textContent = defaultLabel;
+            }, 1800);
+        });
+    });
+
+    const mapElement = document.getElementById("community-map");
+    const mapStatus = document.getElementById("mapStatus");
+    const externalMapLink = document.getElementById("openMapExternal");
+
+    function setMapStatus(message) {
+        if (mapStatus) {
+            mapStatus.textContent = message;
+        }
+    }
+
+    function renderEmbeddedMap(lat, lng, title) {
+        if (!mapElement) {
+            return;
+        }
+
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://maps.google.com/maps?q=${lat},${lng}&z=12&output=embed`;
+        iframe.loading = "lazy";
+        iframe.referrerPolicy = "no-referrer-when-downgrade";
+        iframe.title = title || "Mapa da comunidade";
+        iframe.setAttribute("aria-label", title || "Mapa da comunidade");
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "0";
+
+        mapElement.innerHTML = "";
+        mapElement.appendChild(iframe);
+    }
+
+    function buildInfoWindowContent(title, description) {
+        return `<div style="font-family: 'Source Sans 3', sans-serif; max-width: 240px; line-height: 1.4; color: #2a211c;">
+            <strong style="display:block; margin-bottom: 4px;">${title}</strong>
+            <span>${description}</span>
+        </div>`;
+    }
+
+    function initializeGoogleMap(lat, lng, title, description) {
+        if (!mapElement || !window.google || !window.google.maps) {
+            renderEmbeddedMap(lat, lng, title);
+            setMapStatus("Mapa em modo simplificado.");
+            return;
+        }
+
+        const center = { lat, lng };
+
+        const map = new window.google.maps.Map(mapElement, {
+            center,
+            zoom: 11,
+            streetViewControl: false,
+            mapTypeControl: false,
+            fullscreenControl: false,
+            styles: [
+                { elementType: "geometry", stylers: [{ color: "#efe3d2" }] },
+                { elementType: "labels.text.fill", stylers: [{ color: "#6d5c50" }] },
+                { elementType: "labels.text.stroke", stylers: [{ color: "#fdf7ef" }] },
+                { featureType: "road", elementType: "geometry", stylers: [{ color: "#d2c2ad" }] },
+                { featureType: "water", elementType: "geometry", stylers: [{ color: "#b6c9cf" }] },
+                { featureType: "poi", stylers: [{ visibility: "off" }] }
+            ]
+        });
+
+        const marker = new window.google.maps.Marker({
+            position: center,
+            map,
+            title
+        });
+
+        const infoWindow = new window.google.maps.InfoWindow({
+            content: buildInfoWindowContent(title, description)
+        });
+
+        marker.addListener("click", () => {
+            infoWindow.open({
+                anchor: marker,
+                map
+            });
+        });
+
+        infoWindow.open({
+            anchor: marker,
+            map
+        });
+
+        setMapStatus("Mapa interativo carregado via Google Maps API.");
+    }
+
+    function loadGoogleMapsScript(apiKey, lat, lng, title, description) {
+        if (window.google && window.google.maps) {
+            initializeGoogleMap(lat, lng, title, description);
+            return;
+        }
+
+        window.initCommunityMap = () => initializeGoogleMap(lat, lng, title, description);
+
+        const existingScript = document.getElementById("googleMapsSdk");
+        if (existingScript) {
+            return;
+        }
+
+        setMapStatus("Carregando mapa interativo...");
+
+        const script = document.createElement("script");
+        script.id = "googleMapsSdk";
+        script.async = true;
+        script.defer = true;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&callback=initCommunityMap`;
+
+        script.onerror = () => {
+            renderEmbeddedMap(lat, lng, title);
+            setMapStatus("Não foi possível carregar a API do Google Maps. Exibindo mapa simplificado.");
+        };
+
+        document.head.appendChild(script);
+    }
+
+    if (mapElement) {
+        const lat = Number.parseFloat(mapElement.getAttribute("data-lat") || "");
+        const lng = Number.parseFloat(mapElement.getAttribute("data-lng") || "");
+        const title = mapElement.getAttribute("data-title") || "Comunidade pesquisada";
+        const description = mapElement.getAttribute("data-description") || "Localização de referência da pesquisa.";
+
+        if (Number.isFinite(lat) && Number.isFinite(lng)) {
+            if (externalMapLink) {
+                externalMapLink.href = `https://www.google.com/maps?q=${lat},${lng}`;
+            }
+
+            const inlineApiKey = mapElement.getAttribute("data-api-key") || "";
+            const globalApiKey = typeof window.SABERES_GOOGLE_MAPS_API_KEY === "string" ? window.SABERES_GOOGLE_MAPS_API_KEY : "";
+            const apiKey = (globalApiKey || inlineApiKey).trim();
+
+            if (apiKey) {
+                loadGoogleMapsScript(apiKey, lat, lng, title, description);
+            } else {
+                renderEmbeddedMap(lat, lng, title);
+                setMapStatus("Mapa em modo simplificado. Configure a chave da Google Maps API para habilitar recursos interativos.");
+            }
+        } else {
+            setMapStatus("Coordenadas do mapa não configuradas.");
+        }
+    }
+})();

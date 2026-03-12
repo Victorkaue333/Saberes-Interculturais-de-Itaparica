@@ -1,257 +1,385 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saberes Interculturais dos Povos Indígenas de Itaparica</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-    <!-- Ícones Lucide -->
+    <meta name="description" content="Portal institucional do projeto Saberes Interculturais dos Povos Indígenas de Itaparica.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Link para o CSS Externo (deve vir depois do Bootstrap) -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- Conteúdo principal (tudo exceto footer) -->
-    <main class="main-wrapper">
-    <!-- Header com Bootstrap Navbar -->
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid px-4">
-                <!-- Logo -->
-                <a class="navbar-brand logo" href="#home">
-                    <span class="logo-icon">🍃</span>
-                    <span>Saberes de Itaparica</span>
+    <header class="site-header">
+        <div class="container-xl">
+            <nav class="navbar navbar-expand-lg navbar-dark nav-shell" aria-label="Navegação principal">
+                <a class="navbar-brand brand-mark" href="#home">
+                    <span class="brand-icon" aria-hidden="true">◆</span>
+                    <span class="brand-copy">
+                        <strong>Saberes Interculturais</strong>
+                        <small>Povos Indígenas de Itaparica</small>
+                    </span>
                 </a>
-                
-                <!-- Botão Hambúrguer (visível apenas em mobile) -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <!-- Menu de Navegação -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav nav-links align-items-lg-center">
-                        <li class="nav-item"><a class="nav-link" href="#home" data-section="home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projeto" data-section="projeto">O Projeto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#praticas" data-section="praticas">Saberes & Práticas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#galeria" data-section="galeria">Vivências</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#producao" data-section="producao">Publicações</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sobre" data-section="sobre">Quem Somos</a></li>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav nav-center mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projeto">O Projeto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#saberes">Saberes do Corpo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#registros">Registros Visuais</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#producao">Produção Acadêmica</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#equipe">Quem Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                     </ul>
+                    <a class="btn btn-article mt-3 mt-lg-0" href="https://gcorpo.wordpress.com/2025/09/15/praticas-corporais-do-povo-pankara-o-tore-a-caca-e-o-futebol-no-sertao-pernambucano/" target="_blank" rel="noopener noreferrer">Ver Artigo</a>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
-    <!-- Seção Hero -->
-    <section id="home" class="hero">
-        <h1>SABERES INTERCULTURAIS<br><span class="subtitle-hero">dos Povos Indígenas de Itaparica</span></h1>
-        <p>Onde a terra conta histórias, o corpo preserva memórias e a ancestralidade se entrelaça com o movimento.</p>
-        <a href="#projeto" class="btn">Descobrir Nossa Jornada</a>
-    </section>
-
-    <div class="tribal-divider"></div>
-
-    <!-- Seção O Projeto -->
-    <section id="projeto">
-        <h2 class="section-title">O Território e o Projeto</h2>
-        <div class="project-content">
-            <div class="project-text">
-                <p>O projeto <strong>“Saberes Interculturais dos Povos Indígenas de Itaparica”</strong> nasce do encontro entre a academia e a aldeia. Sediado no <strong>Instituto Federal do Sertão Pernambucano</strong>, buscamos compreender como os saberes tradicionais dialogam com a modernidade sem perder sua essência.</p>
-                <br>
-                <p>Nossa missão é <strong>descolonizar o olhar</strong> sobre as práticas corporais. O corpo indígena não é apenas biológico; é um corpo-território que carrega a memória da caça, a pisada do Toré e a resistência nas margens do "Opará" (Rio São Francisco).</p>
-                <br>
-                <p class="quote">“A cultura não está guardada no museu, ela vive no corpo que dança.”</p>
-            </div>
-            <div class="project-badge">
-                <i data-lucide="sprout" size="60" class="badge-icon"></i>
-                <h4 class="badge-title">Pesquisa & Fomento</h4>
-                <div class="badge-separator"></div>
-                <p><small>Apoio Institucional:<br><strong>CNPq & IF Sertão-PE</strong></small></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Divisor gráfico SVG -->
-    <div class="svg-divider">
-        <svg width="100" height="20" viewBox="0 0 100 20">
-            <path d="M0 10 Q25 0 50 10 T100 10" fill="none" stroke="#b94e24" stroke-width="2"/>
-        </svg>
-    </div>
-
-    <!-- Seção Práticas Corporais -->
-    <section id="praticas">
-        <h2 class="section-title">Saberes do Corpo</h2>
-        <div class="practices-grid">
-            <div class="card">
-                <div class="card-icon"><i data-lucide="music" size="32"></i></div>
-                <h3>O Toré Sagrado</h3>
-                <p>O bater dos pés no chão não é apenas dança, é a comunicação com os Encantados. O Toré reafirma a posse da terra e fortalece o espírito comunitário dos povos de Itaparica.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i data-lucide="target" size="32"></i></div>
-                <h3>Jogos Tradicionais</h3>
-                <p>Da corrida de tora ao arco e flecha, os jogos indígenas são escolas de vida. Eles ensinam foco, cooperação e respeito aos limites do corpo e da natureza.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i data-lucide="users" size="32"></i></div>
-                <h3>Futebol Indígena</h3>
-                <p>O futebol ressignificado. Nas aldeias, a competição cede lugar à celebração. O jogo torna-se um ritual moderno de encontro entre parentes de diferentes etnias.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i data-lucide="sun" size="32"></i></div>
-                <h3>Rituais e Lazer</h3>
-                <p>O lazer não é tempo perdido, é tempo ganho para a cultura. As festas, as pinturas corporais e as histórias contadas ao redor da fogueira mantêm a memória viva.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="tribal-divider"></div>
-
-    <!-- Seção Galeria -->
-    <section id="galeria" class="bg-white section-fullwidth">
-        <div class="container">
-            <h2 class="section-title">Registros Visuais</h2>
-            <p class="gallery-intro">Um olhar sobre as cores, texturas e movimentos que compõem o cotidiano e as celebrações.</p>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="assets/images/oca/5.jpeg" alt="Oca e comunidade" class="img-fluid"></div>
-                <div class="gallery-item"><img src="assets/images/time_de_futebol/13.jpeg" alt="Práticas esportivas" class="img-fluid"></div>
-                <div class="gallery-item"><img src="assets/images/oca/6.jpeg" alt="Vivências culturais" class="img-fluid"></div>
-                <div class="gallery-item"><img src="assets/images/time_de_futebol/14.jpeg" alt="Integração comunitária" class="img-fluid"></div>
-                <div class="gallery-item"><img src="assets/images/oca/19.jpeg" alt="Espaço de saberes" class="img-fluid"></div>
-                <div class="gallery-item"><img src="assets/images/time_de_futebol/15.jpeg" alt="Atividades coletivas" class="img-fluid"></div>
-                <div class="gallery-item"><img src="assets/images/time_de_futebol/16.jpeg" alt="Juventude e cultura" class="img-fluid"></div>
-                <div class="gallery-item"><img src="assets/images/time_de_futebol/17.jpeg" alt="Encontros e trocas" class="img-fluid"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Produção e Pesquisador -->
-    <section id="producao" class="bg-palha section-fullwidth">
-        <div class="container">
-            <h2 class="section-title">Produção Acadêmica</h2>
-            
-            <div class="article-card">
-                <div class="article-header">
-                    <div>
-                        <h3 class="article-title">Artigo: Interculturalidade na Educação Física</h3>
-                        <p class="article-meta">Publicado nos Anais do Congresso de Iniciação Científica</p>
-                    </div>
-                    <a href="#" class="btn btn-small">Baixar PDF <i data-lucide="download" class="icon-download"></i></a>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container-xl hero-content reveal">
+                <p class="hero-kicker">Projeto institucional de pesquisa acadêmica</p>
+                <h1>Saberes Interculturais dos Povos Indígenas de Itaparica</h1>
+                <p class="hero-lead">Uma pesquisa sobre práticas corporais, cultura e memória da comunidade indígena no território de Itacuruba, Pernambuco.</p>
+                <div class="hero-actions">
+                    <a href="#projeto" class="btn btn-primary-custom">Conhecer o Projeto</a>
+                    <a href="#registros" class="btn btn-outline-custom">Explorar Registros</a>
                 </div>
-                <hr class="article-divider">
-                <p>Este estudo investiga como as práticas corporais indígenas podem ser inseridas no currículo escolar não como folclore, mas como conhecimento legítimo e necessário para a formação cidadã.</p>
+                <div class="hero-meta">
+                    <span><i data-lucide="graduation-cap"></i> IF Sertão-PE</span>
+                    <span><i data-lucide="badge-check"></i> Financiamento CNPq</span>
+                    <span><i data-lucide="map-pin"></i> Itacuruba, PE</span>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Quem Somos -->
-    <section id="sobre" class="section-fullwidth">
-        <div class="container">
-            <h2 class="section-title">Quem Somos</h2>
-            
-            <div class="team-container">
-                <!-- Perfil Demetrius -->
-                <div class="researcher-profile">
-                    <div class="researcher-image-wrapper">
-                        <img src="assets/images/escritores/demetrius.png" alt="Professor Demetrius" class="researcher-img">
+        <section id="projeto" class="section-block">
+            <div class="container-xl">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">O Projeto</p>
+                    <h2>Pesquisa intercultural com compromisso territorial e acadêmico</h2>
+                </div>
+                <div class="project-layout">
+                    <article class="project-editorial reveal">
+                        <p>O projeto <strong>Saberes Interculturais dos Povos Indígenas de Itaparica</strong> investiga práticas corporais e modos de vida em diálogo com a pesquisa acadêmica. O foco é registrar conhecimentos vivos, fortalecer a memória coletiva e qualificar o debate educacional sobre interculturalidade.</p>
+                        <p>Mais do que descrever manifestações culturais, a pesquisa interpreta o corpo como território de transmissão de saberes: no Toré, nos jogos tradicionais, na caça e no futebol ressignificado no contexto comunitário.</p>
+                        <blockquote>"A cultura não está guardada no museu, ela vive no corpo que dança."</blockquote>
+                    </article>
+                    <aside class="project-facts reveal">
+                        <h3>Dados institucionais</h3>
+                        <ul>
+                            <li><strong>Vínculo:</strong> IF Sertão Pernambucano</li>
+                            <li><strong>Fomento:</strong> Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)</li>
+                            <li><strong>Território:</strong> Itacuruba, Pernambuco</li>
+                            <li><strong>Eixo:</strong> Educação Física, cultura e interculturalidade</li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="timeline reveal">
+                    <h3>Linha do tempo da pesquisa</h3>
+                    <div class="timeline-grid">
+                        <article class="timeline-item">
+                            <span>Etapa 1</span>
+                            <p>Planejamento teórico e aproximação institucional com a comunidade e lideranças locais.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <span>Etapa 2</span>
+                            <p>Pesquisa de campo, observação e registro das práticas corporais e rituais culturais.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <span>Etapa 3</span>
+                            <p>Sistematização acadêmica, análise intercultural e produção de publicações científicas.</p>
+                        </article>
                     </div>
-                    <div class="researcher-bio">
+                </div>
+            </div>
+        </section>
+
+        <section id="territorio" class="section-block section-territorio">
+            <div class="container-xl">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Território e Comunidade</p>
+                    <h2>Mapa da comunidade estudada</h2>
+                </div>
+                <div class="territorio-layout">
+                    <article class="map-card reveal">
+                        <div
+                            id="community-map"
+                            class="community-map"
+                            data-lat="-8.8289"
+                            data-lng="-38.6971"
+                            data-title="Território indígena estudado em Itacuruba - PE"
+                            data-description="Ponto de referência para o projeto Saberes Interculturais dos Povos Indígenas de Itaparica."
+                            data-api-key=""
+                            aria-label="Mapa da comunidade pesquisada">
+                        </div>
+                        <p id="mapStatus" class="map-status" aria-live="polite"></p>
+                        <a id="openMapExternal" class="map-link" href="https://www.google.com/maps?q=-8.8289,-38.6971" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
+                    </article>
+                    <article class="territorio-text reveal">
+                        <h3>Descrição territorial</h3>
+                        <p>A localização mapeada representa o território de referência da pesquisa e orienta o visitante quanto ao contexto geográfico da comunidade estudada. A leitura do mapa é acompanhada por informações culturais para evitar uma visão meramente cartográfica do espaço.</p>
+                        <ul class="territorio-list">
+                            <li>Relação histórica com o rio São Francisco e com a memória do território.</li>
+                            <li>Centralidade das práticas corporais nos processos de ensino e sociabilidade.</li>
+                            <li>Importância da escuta comunitária para interpretação ética dos dados.</li>
+                        </ul>
+                        <p class="territorio-note">Para ativar o mapa interativo via Google Maps API, adicione sua chave em <code>data-api-key</code> no elemento <code>#community-map</code> ou em <code>window.SABERES_GOOGLE_MAPS_API_KEY</code>.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="saberes" class="section-block">
+            <div class="container-xl">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Saberes do Corpo</p>
+                    <h2>Práticas corporais como conhecimento vivo</h2>
+                </div>
+                <div class="knowledge-grid">
+                    <article class="knowledge-card reveal">
+                        <div class="knowledge-icon"><i data-lucide="music"></i></div>
+                        <h3>Toré</h3>
+                        <p class="knowledge-summary">Manifestação ritual e política que articula memória, identidade e pertencimento territorial.</p>
+                        <button class="knowledge-toggle" type="button" data-target="detail-tore" aria-expanded="false">Ler mais</button>
+                        <p id="detail-tore" class="knowledge-detail" hidden>No Toré, corpo, canto e chão produzem uma pedagogia da ancestralidade. A prática reafirma vínculos coletivos e fortalece processos de resistência cultural.</p>
+                    </article>
+                    <article class="knowledge-card reveal">
+                        <div class="knowledge-icon"><i data-lucide="target"></i></div>
+                        <h3>Jogos tradicionais</h3>
+                        <p class="knowledge-summary">Atividades que transmitem cooperação, disciplina e relação ética com a natureza.</p>
+                        <button class="knowledge-toggle" type="button" data-target="detail-jogos" aria-expanded="false">Ler mais</button>
+                        <p id="detail-jogos" class="knowledge-detail" hidden>Corridas, arremessos e jogos coletivos expressam modos de aprendizagem que integram técnica corporal, respeito comunitário e formação intergeracional.</p>
+                    </article>
+                    <article class="knowledge-card reveal">
+                        <div class="knowledge-icon"><i data-lucide="trophy"></i></div>
+                        <h3>Futebol indígena</h3>
+                        <p class="knowledge-summary">Ressignificação de uma prática contemporânea sob valores comunitários e culturais.</p>
+                        <button class="knowledge-toggle" type="button" data-target="detail-futebol" aria-expanded="false">Ler mais</button>
+                        <p id="detail-futebol" class="knowledge-detail" hidden>O futebol é apropriado como espaço de encontro e sociabilidade entre famílias e gerações, articulando competição com celebração coletiva.</p>
+                    </article>
+                    <article class="knowledge-card reveal">
+                        <div class="knowledge-icon"><i data-lucide="flame"></i></div>
+                        <h3>Rituais e lazer</h3>
+                        <p class="knowledge-summary">Dinâmicas culturais que mantêm viva a transmissão oral e simbólica de saberes.</p>
+                        <button class="knowledge-toggle" type="button" data-target="detail-rituais" aria-expanded="false">Ler mais</button>
+                        <p id="detail-rituais" class="knowledge-detail" hidden>Festas, narrativas e pinturas corporais funcionam como arquivo vivo da comunidade, reforçando pertencimento e continuidade histórica.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="registros" class="section-block section-gallery">
+            <div class="container-xl">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Registros Visuais</p>
+                    <h2>Acervo fotográfico das vivências e práticas comunitárias</h2>
+                </div>
+                <div class="masonry-grid">
+                    <figure class="masonry-item reveal" data-caption="Oca e espaço de convivência comunitária.">
+                        <img src="assets/images/oca/5.jpeg" alt="Oca e espaço de convivência comunitária" loading="lazy">
+                        <figcaption>Oca e comunidade</figcaption>
+                    </figure>
+                    <figure class="masonry-item reveal" data-caption="Prática esportiva coletiva no território.">
+                        <img src="assets/images/time_de_futebol/13.jpeg" alt="Prática esportiva coletiva no território" loading="lazy">
+                        <figcaption>Práticas esportivas</figcaption>
+                    </figure>
+                    <figure class="masonry-item reveal" data-caption="Registro de cotidiano e organização cultural local.">
+                        <img src="assets/images/oca/6.jpeg" alt="Registro de cotidiano e organização cultural local" loading="lazy">
+                        <figcaption>Vivências culturais</figcaption>
+                    </figure>
+                    <figure class="masonry-item reveal" data-caption="Integração comunitária em atividades coletivas.">
+                        <img src="assets/images/time_de_futebol/14.jpeg" alt="Integração comunitária em atividades coletivas" loading="lazy">
+                        <figcaption>Integração comunitária</figcaption>
+                    </figure>
+                    <figure class="masonry-item reveal" data-caption="Espaços de memória e transmissão de saberes.">
+                        <img src="assets/images/oca/19.jpeg" alt="Espaços de memória e transmissão de saberes" loading="lazy">
+                        <figcaption>Espaço de saberes</figcaption>
+                    </figure>
+                    <figure class="masonry-item reveal" data-caption="Atividades corporais e encontros intergeracionais.">
+                        <img src="assets/images/time_de_futebol/15.jpeg" alt="Atividades corporais e encontros intergeracionais" loading="lazy">
+                        <figcaption>Atividades coletivas</figcaption>
+                    </figure>
+                    <figure class="masonry-item reveal" data-caption="Juventude indígena em práticas culturais e esportivas.">
+                        <img src="assets/images/time_de_futebol/16.jpeg" alt="Juventude indígena em práticas culturais e esportivas" loading="lazy">
+                        <figcaption>Juventude e cultura</figcaption>
+                    </figure>
+                    <figure class="masonry-item reveal" data-caption="Trocas simbólicas e encontros comunitários.">
+                        <img src="assets/images/time_de_futebol/17.jpeg" alt="Trocas simbólicas e encontros comunitários" loading="lazy">
+                        <figcaption>Encontros e trocas</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="producao" class="section-block section-publications">
+            <div class="container-xl">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Produção Acadêmica</p>
+                    <h2>Publicações e resultados científicos</h2>
+                </div>
+                <div class="publication-list">
+                    <article class="publication-card reveal">
+                        <div class="publication-top">
+                            <span class="publication-tag">Artigo publicado</span>
+                            <a class="publication-link" href="https://gcorpo.wordpress.com/2025/09/15/praticas-corporais-do-povo-pankara-o-tore-a-caca-e-o-futebol-no-sertao-pernambucano/" target="_blank" rel="noopener noreferrer">Ler online</a>
+                        </div>
+                        <h3>Práticas corporais do povo Pankará: o Toré, a caça e o futebol no sertão pernambucano</h3>
+                        <p class="publication-meta">Projeto Saberes Interculturais dos Povos Indígenas de Itaparica • Divulgação científica 2025</p>
+                        <blockquote>A produção destaca o reconhecimento das práticas corporais indígenas como conhecimento legítimo no campo educacional e cultural.</blockquote>
+                        <div class="publication-actions">
+                            <a class="btn btn-primary-custom btn-sm-custom" href="https://gcorpo.wordpress.com/2025/09/15/praticas-corporais-do-povo-pankara-o-tore-a-caca-e-o-futebol-no-sertao-pernambucano/" target="_blank" rel="noopener noreferrer">Acessar artigo</a>
+                            <button class="btn btn-outline-custom btn-sm-custom copy-citation" type="button" data-citation="PRÁTICAS CORPORAIS DO POVO PANKARÁ: o Toré, a caça e o futebol no sertão pernambucano. Disponível em: https://gcorpo.wordpress.com/2025/09/15/praticas-corporais-do-povo-pankara-o-tore-a-caca-e-o-futebol-no-sertao-pernambucano/. Acesso em: 12 mar. 2026.">Copiar citação</button>
+                        </div>
+                    </article>
+                    <article class="publication-card reveal">
+                        <div class="publication-top">
+                            <span class="publication-tag">Relatório de campo</span>
+                            <span class="publication-link muted-link">Em atualização</span>
+                        </div>
+                        <h3>Sistematização metodológica da pesquisa em território indígena</h3>
+                        <p class="publication-meta">Documento técnico do projeto • IF Sertão-PE / CNPq</p>
+                        <blockquote>Material com notas metodológicas, critérios éticos e organização dos registros da pesquisa de campo.</blockquote>
+                        <div class="publication-actions">
+                            <button class="btn btn-outline-custom btn-sm-custom" type="button" disabled>Download em breve</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe" class="section-block">
+            <div class="container-xl">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Quem Somos</p>
+                    <h2>Equipe de pesquisa</h2>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card reveal">
+                        <img src="assets/images/escritores/demetrius.png" alt="Professor Demetrius, orientador do projeto" class="team-photo">
                         <h3>Demetrius</h3>
-                        <span class="researcher-role">Orientador do Projeto</span>
-                        <p>Professor de Educação Física do IF Sertão-PE, dedicado à pesquisa de campo e à valorização das raízes sertanejas e indígenas. Sua expertise em práticas corporais tradicionais orienta este trabalho de resgate cultural.</p>
-                    </div>
-                </div>
-
-                <!-- Perfil Victor Kauê -->
-                <div class="researcher-profile">
-                    <div class="researcher-image-wrapper">
-                        <img src="assets/images/escritores/victor_kauê.png" alt="Victor Kauê" class="researcher-img">
-                    </div>
-                    <div class="researcher-bio">
+                        <p class="team-role">Orientador do Projeto</p>
+                        <p>Professor de Educação Física do IF Sertão-PE, com atuação em pesquisa de campo e valorização de práticas corporais tradicionais no contexto sertanejo e indígena.</p>
+                        <div class="team-links">
+                            <a href="https://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer">Lattes</a>
+                            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">Perfil acadêmico</a>
+                        </div>
+                    </article>
+                    <article class="team-card reveal">
+                        <img src="assets/images/escritores/victor_kauê.png" alt="Victor Kauê, bolsista CNPq" class="team-photo">
                         <h3>Victor Kauê</h3>
-                        <span class="researcher-role">Bolsista CNPq</span>
-                        <p>Estudante de Gestão da TI do IF Sertão-PE, dedicado à pesquisa de campo e à valorização das raízes sertanejas e indígenas. Como bolsista CNPq, dedicou mais de 1 ano à pesquisa comprometida com a ciência cidadã e o diálogo intercultural.</p>
+                        <p class="team-role">Bolsista CNPq</p>
+                        <p>Estudante de Gestão da TI no IF Sertão-PE, com foco em divulgação científica, sistematização dos dados e construção de pontes entre tecnologia, cultura e pesquisa intercultural.</p>
+                        <div class="team-links">
+                            <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Botão Voltar ao Topo -->
-    <button id="btnVoltarTopo" class="btn-voltar-topo" aria-label="Voltar ao topo" title="Voltar ao topo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
+        <section id="instituicoes" class="section-block section-institutions">
+            <div class="container-xl">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Instituições apoiadoras</p>
+                    <h2>Parcerias e financiamento</h2>
+                </div>
+                <div class="institution-grid reveal">
+                    <article class="institution-card">
+                        <img src="assets/images/instituicoes/IF.png" alt="Logo do IF Sertão-PE">
+                        <p>Instituto Federal do Sertão Pernambucano</p>
+                    </article>
+                    <article class="institution-card">
+                        <img src="assets/images/instituicoes/Cnpq.png" alt="Logo do CNPq">
+                        <p>Conselho Nacional de Desenvolvimento Científico e Tecnológico</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section-block section-contact">
+            <div class="container-xl">
+                <div class="contact-layout">
+                    <article class="contact-card reveal">
+                        <p class="eyebrow">Contato</p>
+                        <h2>Fale com a equipe do projeto</h2>
+                        <p>Para informações institucionais, parcerias de pesquisa, apresentações acadêmicas e solicitações sobre o acervo do projeto.</p>
+                        <ul class="contact-list">
+                            <li><i data-lucide="mail"></i><span>Email: saberesitaparica@ifsertao-pe.edu.br</span></li>
+                            <li><i data-lucide="map-pinned"></i><span>IF Sertão-PE • Pernambuco, Brasil</span></li>
+                            <li><i data-lucide="file-text"></i><span>Atendimento para pesquisadores e instituições</span></li>
+                        </ul>
+                        <a class="btn btn-primary-custom" href="mailto:saberesitaparica@ifsertao-pe.edu.br">Enviar mensagem</a>
+                    </article>
+                    <article class="contact-card reveal contact-secondary">
+                        <p class="eyebrow">Acesso rápido</p>
+                        <h3>Materiais e presença digital</h3>
+                        <p>Consulte a publicação principal e acompanhe a evolução do projeto nos canais digitais.</p>
+                        <div class="quick-links">
+                            <a href="https://gcorpo.wordpress.com/2025/09/15/praticas-corporais-do-povo-pankara-o-tore-a-caca-e-o-futebol-no-sertao-pernambucano/" target="_blank" rel="noopener noreferrer">Publicação principal</a>
+                            <a href="https://github.com/Victorkaue333/saberes-interculturais-itaparica" target="_blank" rel="noopener noreferrer">Repositório do projeto</a>
+                            <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer">Perfil do autor</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up"></i>
     </button>
 
-    <!-- Modal para Galeria -->
-    <div id="modal">
-        <img id="modal-img" src="" alt="Ampliada">
-        <div class="modal-close-text">Clique fora para fechar</div>
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visualização de imagem">
+        <button id="lightboxClose" class="lightbox-close" type="button" aria-label="Fechar visualização">
+            <i data-lucide="x"></i>
+        </button>
+        <img id="lightboxImage" src="" alt="">
+        <p id="lightboxCaption"></p>
     </div>
-    </main>
-    <!-- Fim do conteúdo principal -->
 
-    <!-- Footer Profissional -->
-    <footer>
-        <div class="tribal-divider footer-pattern"></div>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Coluna 1: Sobre -->
-                <div class="footer-column">
-                    <h4>Sobre o Projeto</h4>
-                    <p>Saberes Interculturais dos Povos Indígenas de Itaparica - Valorizando práticas corporais, cultura e ancestralidade.</p>
+    <footer class="site-footer">
+        <div class="container-xl footer-shell">
+            <div class="footer-main">
+                <div>
+                    <h4>Saberes Interculturais</h4>
+                    <p>Portal institucional para divulgação científica e valorização dos saberes dos povos indígenas de Itaparica.</p>
                 </div>
-                
-                <!-- Coluna 2: Navegação -->
-                <div class="footer-column">
+                <div>
                     <h4>Navegação</h4>
-                    <ul class="footer-links">
+                    <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#projeto">O Projeto</a></li>
-                        <li><a href="#praticas">Saberes & Práticas</a></li>
-                        <li><a href="#sobre">Quem Somos</a></li>
+                        <li><a href="#saberes">Saberes do Corpo</a></li>
+                        <li><a href="#producao">Produção Acadêmica</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
-                
-                <!-- Coluna 3: Apoio -->
-                <div class="footer-column">
-                    <h4>Apoio Institucional</h4>
-                    <div class="footer-badges">
-                        <img src="assets/images/instituicoes/IF.png" alt="IF Sertão-PE" class="instituicao-logo">
-                        
-                    </div>
+                <div>
+                    <h4>Redes acadêmicas</h4>
+                    <ul>
+                        <li><a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2024 - Projeto Saberes Interculturais de Itaparica</p>
-                <p class="footer-note">Feito por Victor Kauê com respeito à ancestralidade e aos saberes tradicionais</p>
-                <p class="footer-note">Redes Sociais:</p>
-                <div class="social-links">
-                    <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i data-lucide="linkedin"></i>
-                    </a>
-                </div>
+                <p>&copy; <span id="currentYear"></span> Projeto Saberes Interculturais dos Povos Indígenas de Itaparica.</p>
+                <p>Desenvolvido para divulgação institucional e acadêmica com respeito à cultura indígena.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle (inclui Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- Link para o Script JavaScript Externo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-    <script>
-        // Inicializar ícones Lucide
-        lucide.createIcons();
-    </script>
 </body>
 </html>
