@@ -39,7 +39,7 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 - ✍️ **Google Fonts**
 - 🧿 **Lucide Icons**
 
-## 7. 📁 Estrutura do projeto (árvore de diretórios)
+## 7. 📁 Estrutura do projeto
 
 ```text
 saberes-interculturais-itaparica/
