@@ -3,12 +3,15 @@
 📌 Repositório oficial: [Victorkaue333/saberes-interculturais-itaparica](https://github.com/Victorkaue333/saberes-interculturais-itaparica)
 
 ## 1. 🏷️ Título do projeto
+
 **Saberes Interculturais dos Povos Indígenas de Itaparica**
 
 ## 2. 🧾 Breve descrição do projeto
+
 Site institucional desenvolvido para divulgar um projeto acadêmico de pesquisa e extensão voltado à valorização dos saberes tradicionais indígenas da região de Itaparica (mediações de Itacuruba - Pernambuco), com foco em práticas corporais e culturais no ensino da Educação Física.
 
 ## 3. 🎓 Contexto acadêmico
+
 O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambucano (IF Sertão-PE)**, com apoio do **CNPq**, promovendo o diálogo entre conhecimentos acadêmicos e saberes culturais indígenas.
 
 ## 4. 🎯 Objetivos do projeto
