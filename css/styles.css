@@ -78,10 +78,10 @@ code {
 }
 
 .nav-shell {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-md);
-    background: var(--dark-shell);
-    backdrop-filter: blur(8px);
+    background: rgba(30, 20, 15, 0.55);
+    backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
     padding: 0.7rem 1rem;
     transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
@@ -89,7 +89,7 @@ code {
 
 .site-header.scrolled .nav-shell {
     transform: translateY(-2px);
-    background: rgba(22, 19, 17, 0.9);
+    background: rgba(30, 20, 15, 0.72);
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -200,14 +200,20 @@ code {
     background-image: url("../assets/images/backgrounds/hero-background-2.png");
     background-position: center bottom;
     background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(145deg, rgba(24, 20, 17, 0.85), rgba(41, 30, 23, 0.58)),
-        radial-gradient(circle at 75% 15%, rgba(183, 90, 49, 0.45), transparent 40%);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.55)
+    );
+    pointer-events: none;
 }
 
 .hero-content {
@@ -229,9 +235,10 @@ code {
 }
 
 .hero-content h1 {
-    font-family: var(--font-heading);
+    font-family: "Playfair Display", var(--font-heading);
+    font-weight: 500;
     font-size: clamp(2.2rem, 7vw, 4.2rem);
-    line-height: 1;
+    line-height: 1.2;
     letter-spacing: 0.015em;
     margin-bottom: 1rem;
 }
@@ -313,6 +320,28 @@ code {
 .hero-meta svg {
     width: 16px;
     height: 16px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 20px;
+    line-height: 1;
+    z-index: 1;
+    animation: hero-bounce 2s infinite;
+}
+
+@keyframes hero-bounce {
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 8px);
+    }
 }
 
 .section-block {
@@ -1032,6 +1061,12 @@ code {
     }
 }
 
+@media (max-width: 991.98px) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+}
+
 @media (min-width: 992px) {
     .nav-center {
         padding-top: 0;
@@ -1092,5 +1127,13 @@ code {
     .reveal {
         opacity: 1;
         transform: none;
+    }
+
+    .scroll-indicator {
+        animation: none;
+    }
+
+    .hero-section {
+        background-attachment: scroll;
     }
 }
