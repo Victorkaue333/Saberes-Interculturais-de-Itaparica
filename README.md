@@ -77,12 +77,15 @@ saberes-interculturais-itaparica/
    - Abrir o arquivo `index.html` diretamente no navegador; ou
    - Utilizar uma extensão como **Live Server** (VS Code); ou
    - Iniciar um servidor local:
+
      ```bash
      python -m http.server 5500
      ```
+
 4. Acesse em: `http://localhost:5500`
 
 ## 9. 🚀 Possíveis melhorias futuras
+
 - Implementar versão multilíngue (PT/EN).
 - Adicionar CMS para gestão de conteúdos institucionais.
 - Expandir a seção de publicações com filtros e metadados.
@@ -90,6 +93,7 @@ saberes-interculturais-itaparica/
 - Evoluir critérios de acessibilidade (WCAG) com auditoria completa.
 
 ## 10. 👨‍💻 Autor do projeto
+
 **Victor Kauê**  
 Desenvolvedor Full-Stack com foco em Python, Django e desenvolvimento web.
 
@@ -97,5 +101,6 @@ Desenvolvedor Full-Stack com foco em Python, Django e desenvolvimento web.
 - 💼 LinkedIn: [Victor Kauê](https://www.linkedin.com/in/victor-kau%C3%AA-419926364/)
 
 ## 11. 📄 Licença
-Este projeto foi desenvolvido para fins acadêmicos e de divulgação científica.  
+
+Este projeto foi desenvolvido para fins acadêmicos e de divulgação científica.
 Atualmente, não há uma licença open source específica definida no repositório.
