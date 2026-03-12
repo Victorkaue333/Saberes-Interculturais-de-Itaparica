@@ -66,11 +66,13 @@ saberes-interculturais-itaparica/
    ```bash
    git clone https://github.com/Victorkaue333/saberes-interculturais-itaparica.git
    ```
-   
+
 2. Acesse a pasta do projeto:
+
    ```bash
    cd saberes-interculturais-itaparica
    ```
+
 3. Execute localmente com uma das opções abaixo:
    - Abrir o arquivo `index.html` diretamente no navegador; ou
    - Utilizar uma extensão como **Live Server** (VS Code); ou
