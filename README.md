@@ -62,9 +62,11 @@ saberes-interculturais-itaparica/
 ## 8. ▶️ Como executar o projeto localmente
 
 1. Clone o repositório:
+
    ```bash
    git clone https://github.com/Victorkaue333/saberes-interculturais-itaparica.git
    ```
+   
 2. Acesse a pasta do projeto:
    ```bash
    cd saberes-interculturais-itaparica
