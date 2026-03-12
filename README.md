@@ -8,7 +8,7 @@
 
 ## 2. 🧾 Breve descrição do projeto
 
-Site institucional desenvolvido para divulgar um projeto acadêmico de pesquisa e extensão voltado à valorização dos saberes tradicionais indígenas da região de Itaparica (mediações de Itacuruba - Pernambuco), com foco em práticas corporais e culturais no ensino da Educação Física.
+O presente site institucional foi desenvolvido para divulgar um projeto acadêmico de pesquisa e extensão voltado à valorização dos saberes tradicionais indígenas da região de Itaparica (mediações de Itacuruba - Pernambuco), com foco em práticas corporais e culturais no ensino da Educação Física.
 
 ## 3. 🎓 Contexto acadêmico
 
