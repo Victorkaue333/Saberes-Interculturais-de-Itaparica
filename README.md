@@ -40,6 +40,7 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 - 🧿 **Lucide Icons**
 
 ## 7. 📁 Estrutura do projeto (árvore de diretórios)
+
 ```text
 saberes-interculturais-itaparica/
 |-- index.html
@@ -59,6 +60,7 @@ saberes-interculturais-itaparica/
 ```
 
 ## 8. ▶️ Como executar o projeto localmente
+
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Victorkaue333/saberes-interculturais-itaparica.git
