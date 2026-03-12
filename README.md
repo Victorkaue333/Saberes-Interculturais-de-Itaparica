@@ -15,12 +15,14 @@ Site institucional desenvolvido para divulgar um projeto acadêmico de pesquisa 
 O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambucano (IF Sertão-PE)**, com apoio do **CNPq**, promovendo o diálogo entre conhecimentos acadêmicos e saberes culturais indígenas.
 
 ## 4. 🎯 Objetivos do projeto
+
 - Valorizar os saberes tradicionais dos povos indígenas da região de Itaparica.
 - Divulgar resultados de pesquisa e extensão em linguagem acessível.
 - Fortalecer o diálogo intercultural no contexto da Educação Física.
 - Organizar conteúdos institucionais, visuais e acadêmicos em um portal digital.
 
 ## 5. 🧩 Funcionalidades principais
+
 - 🏛️ Hero section institucional com chamada principal do projeto.
 - 🧭 Navegação estruturada com menu responsivo.
 - 📖 Seção de apresentação do projeto e contexto territorial.
@@ -29,6 +31,7 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 - 🏢 Informações institucionais e contatos.
 
 ## 6. 🛠️ Tecnologias utilizadas
+
 - 🌐 **HTML5**
 - 🎨 **CSS3**
 - ⚙️ **JavaScript (Vanilla JS)**
