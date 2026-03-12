@@ -1,65 +1,89 @@
-# 🌿 Saberes Interculturais de Itaparica
+# 🌿 Saberes Interculturais dos Povos Indígenas de Itaparica
 
-Site de divulgação do projeto **"Saberes Interculturais dos Povos Indígenas de Itaparica"**, desenvolvido no âmbito do CNPq e Instituto Federal do Sertão Pernambucano (IF Sertão-PE).
+Repositório oficial: [Victorkaue333/saberes-interculturais-itaparica](https://github.com/Victorkaue333/saberes-interculturais-itaparica)
 
-## 📋 Sobre o Projeto
+## 1. Título do projeto
+**Saberes Interculturais dos Povos Indígenas de Itaparica**
 
-O projeto teve como objetivo valorizar, reconhecer e incorporar os saberes tradicionais indígenas às práticas pedagógicas da Educação Física, promovendo o diálogo entre conhecimentos acadêmicos e saberes tradicionais dos povos indígenas de Itaparica precisamente localizado em Itacuruba - Pe.
+## 2. Breve descrição do projeto
+Site institucional desenvolvido para divulgar um projeto acadêmico de pesquisa e extensão voltado à valorização dos saberes tradicionais indígenas da região de Itaparica (mediações de Itacuruba - Pernambuco), com foco em práticas corporais e culturais no ensino da Educação Física.
 
-### Práticas Corporais Estudadas
+## 3. Contexto acadêmico
+O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambucano (IF Sertão-PE)**, com apoio do **CNPq**, promovendo o diálogo entre conhecimentos acadêmicos e saberes culturais indígenas.
 
-- **Toré**: Dança ritual de grande importância cultural
-- **Caça tradicional**: Práticas ancestrais de subsistência
-- **Futebol no contexto indígena**: Ressignificação cultural do esporte
-- **Jogos, danças e rituais**: Manifestações culturais tradicionais
+## 4. Objetivos do projeto
+- Valorizar os saberes tradicionais dos povos indígenas da região de Itaparica.
+- Divulgar resultados de pesquisa e extensão em linguagem acessível.
+- Fortalecer o diálogo intercultural no contexto da Educação Física.
+- Organizar conteúdos institucionais, visuais e acadêmicos em um portal digital.
 
-## 🎯 Objetivos
+## 5. Funcionalidades principais
+- Hero section institucional com chamada principal do projeto.
+- Navegação estruturada com menu responsivo.
+- Seção de apresentação do projeto e contexto territorial.
+- Registros visuais e galeria cultural.
+- Bloco de produção acadêmica/publicações.
+- Informações institucionais e contatos.
 
-- Valorizar os saberes tradicionais indígenas
-- Promover diálogo intercultural na Educação Física
-- Documentar e divulgar práticas corporais do povo Pankará
-- Integrar conhecimentos acadêmicos e tradicionais
+## 6. Tecnologias utilizadas
+- **HTML5**
+- **CSS3**
+- **JavaScript (Vanilla JS)**
+- **Bootstrap 5**
+- **Google Fonts**
+- **Lucide Icons**
 
-## 🚀 Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Design responsivo
-- Bootstrap
-
-## 📂 Estrutura do Projeto
-
-```
+## 7. Estrutura do projeto (árvore de diretórios)
+```text
 saberes-interculturais-itaparica/
-│
-├── index.html          # Página principal
-├── css/
-│   └── styles.css      # Estilos do site
-├── js/
-│   └── script.js       # Interatividade
-└── assets/
-    └── images/         # Imagens e mídias
+|-- index.html
+|-- css/
+|   `-- styles.css
+|-- js/
+|   `-- script.js
+|-- assets/
+|   `-- images/
+|       |-- backgrounds/
+|       |-- escritores/
+|       |-- galeria/
+|       |-- instituicoes/
+|       |-- oca/
+|       `-- time_de_futebol/
+`-- README.md
 ```
 
-## 📝 Produção Científica
+## 8. Como executar o projeto localmente
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Victorkaue333/saberes-interculturais-itaparica.git
+   ```
+2. Acesse a pasta do projeto:
+   ```bash
+   cd saberes-interculturais-itaparica
+   ```
+3. Execute localmente com uma das opções abaixo:
+   - Abrir o arquivo `index.html` diretamente no navegador; ou
+   - Utilizar uma extensão como **Live Server** (VS Code); ou
+   - Iniciar um servidor local:
+     ```bash
+     python -m http.server 5500
+     ```
+4. Acesse em: `http://localhost:5500`
 
-**Artigo publicado**: Práticas corporais do povo Pankará: o toré, a caça e o futebol no sertão pernambucano.
+## 9. Possíveis melhorias futuras
+- Implementar versão multilíngue (PT/EN).
+- Adicionar CMS para gestão de conteúdos institucionais.
+- Expandir a seção de publicações com filtros e metadados.
+- Incluir testes automatizados para scripts de interação.
+- Evoluir critérios de acessibilidade (WCAG) com auditoria completa.
 
-[Leia o artigo completo](https://gcorpo.wordpress.com/2025/09/15/praticas-corporais-do-povo-pankara-o-tore-a-caca-e-o-futebol-no-sertao-pernambucano/)
+## 10. Autor do projeto 👨‍💻
+**Victor Kauê**  
+Desenvolvedor Full-Stack com foco em Python, Django e desenvolvimento web.
 
-## 🤝 Financiamento
+- GitHub: [@Victorkaue333](https://github.com/Victorkaue333)
+- LinkedIn: [Victor Kauê](https://www.linkedin.com/in/victor-kau%C3%AA-419926364/)
 
-Projeto financiado pelo **CNPq** (Conselho Nacional de Desenvolvimento Científico e Tecnológico) em parceria com o **IF Sertão Pernambucano**.
-
-## 👨‍💻 Autor
-
-Desenvolvedor Full-Stack e pesquisador, com atuação em projetos de extensão, cultura e educação intercultural, integrando tecnologia e produção acadêmica.
-
-## 📄 Licença
-
+## 11. Licença
 Este projeto foi desenvolvido para fins acadêmicos e de divulgação científica.
-
----
-
-**Importante**: Este site visa promover o respeito e valorização dos saberes tradicionais dos povos indígenas, contribuindo para a preservação cultural e o diálogo intercultural.
+Atualmente, não há uma licença open source específica definida no repositório.
