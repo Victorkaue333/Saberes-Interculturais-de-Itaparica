@@ -86,14 +86,6 @@ O processo para rodar o projeto localmente é simples e pode ser feito de vária
 
 4. Acesse em: `http://localhost:5500`
 
-## 9. 🚀 Possíveis melhorias futuras
-
-- Implementar versão multilíngue (PT/EN).
-- Adicionar CMS para gestão de conteúdos institucionais.
-- Expandir a seção de publicações com filtros e metadados.
-- Incluir testes automatizados para scripts de interação.
-- Evoluir critérios de acessibilidade (WCAG) com auditoria completa.
-
 ## 10. 👨‍💻 Autor do projeto
 
 **Victor Kauê**
