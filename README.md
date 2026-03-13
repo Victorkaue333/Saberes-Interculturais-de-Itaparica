@@ -41,9 +41,53 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 saberes-interculturais-itaparica/
 |-- index.html
 |-- css/
-|   `-- styles.css
+|   |-- main.css
+|   |-- styles.css
+|   |-- settings/
+|   |   |-- tokens.css
+|   |   `-- breakpoints.css
+|   |-- base/
+|   |   |-- reset.css
+|   |   |-- base.css
+|   |   `-- typography.css
+|   |-- layout/
+|   |   |-- container.css
+|   |   |-- grid.css
+|   |   |-- header.css
+|   |   `-- footer.css
+|   |-- components/
+|   |   |-- button.css
+|   |   |-- card.css
+|   |   |-- form.css
+|   |   `-- modal.css
+|   |-- pages/
+|   |   |-- home.css
+|   |   |-- sobre.css
+|   |   `-- contato.css
+|   `-- utilities/
+|       |-- spacing.css
+|       |-- display.css
+|       `-- text.css
 |-- js/
-|   `-- script.js
+|   |-- main.js
+|   |-- script.js
+|   |-- core/
+|   |   |-- dom.js
+|   |   `-- events.js
+|   |-- components/
+|   |   |-- menu.js
+|   |   |-- modal.js
+|   |   `-- accordion.js
+|   |-- pages/
+|   |   |-- home.js
+|   |   `-- contato.js
+|   |-- services/
+|   |   |-- api.js
+|   |   `-- storage.js
+|   `-- utils/
+|       |-- debounce.js
+|       |-- format.js
+|       `-- validators.js
 |-- assets/
 |   `-- images/
 |       |-- backgrounds/
@@ -52,6 +96,9 @@ saberes-interculturais-itaparica/
 |       |-- instituicoes/
 |       |-- oca/
 |       `-- time_de_futebol/
+|-- docs/
+|   |-- estrutura-css.md
+|   `-- estrutura-js.md
 `-- README.md
 ```
 
