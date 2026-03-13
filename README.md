@@ -37,7 +37,7 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 
 ## 6. 📁 Estrutura do projeto
 
-```text
+```
 saberes-interculturais-itaparica/
 |-- index.html
 |-- css/
