@@ -21,6 +21,19 @@
     font-size: 1.45rem;
 }
 
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.7rem;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-icons svg {
+    width: 17px;
+    height: 17px;
+}
+
 .footer-main p,
 .footer-main li {
     color: rgba(255, 255, 255, 0.74);
