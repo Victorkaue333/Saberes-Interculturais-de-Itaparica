@@ -1,3 +1,5 @@
+### Estrutura de Arquivos JS
+
 js/
   core/
     dom.js            # seletores/helpers de DOM
