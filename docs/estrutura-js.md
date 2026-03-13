@@ -1,5 +1,7 @@
 ### Estrutura de Arquivos JS
 
+Aqui está a estrutura detalhada dos arquivos JavaScript organizados em pastas para facilitar a manutenção e escalabilidade do projeto. Cada pasta tem uma função específica, seguindo uma hierarquia lógica:
+
 js/
   core/
     dom.js            # seletores/helpers de DOM
