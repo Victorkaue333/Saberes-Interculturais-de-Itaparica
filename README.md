@@ -95,8 +95,3 @@ Desenvolvedor Full-Stack com foco em Python, Django e desenvolvimento web.
 - 💼 LinkedIn: [Victor Kauê](https://www.linkedin.com/in/victor-kau%C3%AA-419926364/)
 - 📧 Email: kaue.alves.pg@gmail.com
 - 🌐 Portfólio: [victorkauê](https://victorkaue.netlify.app/)
-
-## 11. 📄 Licença
-
-Este projeto foi desenvolvido para fins acadêmicos e de divulgação científica.
-Atualmente, não há uma licença open source específica definida no repositório.
