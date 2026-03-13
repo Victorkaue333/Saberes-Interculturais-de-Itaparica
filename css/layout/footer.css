@@ -47,5 +47,12 @@
     padding-top: 1rem;
     color: rgba(255, 255, 255, 0.63);
     font-size: 0.88rem;
+    text-align: center;
+    display: grid;
+    gap: 0.65rem;
+    justify-items: center;
 }
 
+.footer-bottom p {
+    margin: 0;
+}
