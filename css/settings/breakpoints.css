@@ -55,6 +55,22 @@
     }
 }
 
+@media (max-width: 767.98px) {
+    .hero-section {
+        min-height: 92svh;
+        padding: 6.8rem 0 3.2rem;
+        background-position: 58% center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section {
+        min-height: 88svh;
+        padding: 6.3rem 0 2.8rem;
+        background-position: 62% center;
+    }
+}
+
 @media (min-width: 992px) {
     .nav-center {
         padding-top: 0;
