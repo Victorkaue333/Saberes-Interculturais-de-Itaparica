@@ -2,22 +2,22 @@
 
 📌 Repositório oficial: [Victorkaue333/saberes-interculturais-itaparica](https://github.com/Victorkaue333/saberes-interculturais-itaparica)
 
-## 2. 🧾 Sobre o projeto
+## 1. 🧾 Sobre o projeto
 
 O presente site institucional foi desenvolvido para divulgar um projeto acadêmico de pesquisa e extensão voltado à valorização dos saberes tradicionais indígenas da região de Itaparica (mediações de Itacuruba - Pernambuco), com foco em práticas corporais e culturais no ensino da Educação Física.
 
-## 3. 🎓 Contexto acadêmico
+## 2. 🎓 Contexto acadêmico
 
 O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambucano (IF Sertão-PE)**, com apoio do **CNPq**, promovendo o diálogo entre conhecimentos acadêmicos e saberes culturais indígenas.
 
-## 4. 🎯 Objetivos do projeto
+## 3. 🎯 Objetivos do projeto
 
 - Valorizar os saberes tradicionais dos povos indígenas da região de Itaparica.
 - Divulgar resultados de pesquisa e extensão em linguagem acessível.
 - Fortalecer o diálogo intercultural no contexto da Educação Física.
 - Organizar conteúdos institucionais, visuais e acadêmicos em um portal digital.
 
-## 5. 🧩 Funcionalidades principais
+## 4. 🧩 Funcionalidades principais
 
 - 🏛️ Hero section institucional com chamada principal do projeto.
 - 🧭 Navegação estruturada com menu responsivo.
@@ -26,7 +26,7 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 - 📚 Bloco de produção acadêmica/publicações.
 - 🏢 Informações institucionais e contatos.
 
-## 6. 🛠️ Tecnologias utilizadas
+## 5. 🛠️ Tecnologias utilizadas
 
 - 🌐 **HTML5**
 - 🎨 **CSS3**
@@ -35,7 +35,7 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 - ✍️ **Google Fonts**
 - 🧿 **Lucide Icons**
 
-## 7. 📁 Estrutura do projeto
+## 6. 📁 Estrutura do projeto
 
 ```text
 saberes-interculturais-itaparica/
@@ -55,7 +55,7 @@ saberes-interculturais-itaparica/
 `-- README.md
 ```
 
-## 8. ▶️ Como executar o projeto localmente
+## 7. ▶️ Como executar o projeto localmente
 
 O processo para rodar o projeto localmente é simples e pode ser feito de várias formas. Siga os passos abaixo:
 
@@ -82,7 +82,7 @@ O processo para rodar o projeto localmente é simples e pode ser feito de vária
 
 4. Acesse em: `http://localhost:5500`
 
-## 10. 👨‍💻 Autor do projeto
+## 8. 👨‍💻 Autor do projeto
 
 **Victor Kauê**
 Desenvolvedor Full-Stack com foco em Python, Django e desenvolvimento web.
