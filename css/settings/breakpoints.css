@@ -1,0 +1,133 @@
+﻿@media (min-width: 768px) {
+    .site-header {
+        padding-top: 1rem;
+    }
+
+    .nav-shell {
+        padding: 0.75rem 1.2rem;
+    }
+
+    .brand-copy strong {
+        font-size: 1rem;
+    }
+
+    .brand-copy small {
+        font-size: 0.78rem;
+    }
+
+    .hero-section {
+        padding-top: 8.6rem;
+    }
+
+    .section-block {
+        padding: 5.4rem 0;
+    }
+
+    .project-layout,
+    .territorio-layout,
+    .team-grid,
+    .institution-grid,
+    .contact-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .knowledge-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .masonry-grid {
+        columns: 2;
+    }
+
+    .footer-main {
+        grid-template-columns: 1.3fr 1fr 1fr;
+    }
+
+    .back-to-top {
+        right: 1.25rem;
+        bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-center {
+        padding-top: 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.6rem 0.55rem;
+    }
+
+    .project-layout {
+        grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    }
+
+    .knowledge-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .publication-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .masonry-grid {
+        columns: 3;
+    }
+
+    .community-map {
+        height: 360px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-nav .nav-link {
+        padding-inline: 0.68rem;
+    }
+
+    .section-block {
+        padding: 6rem 0;
+    }
+
+    .masonry-grid {
+        columns: 4;
+    }
+
+    .community-map {
+        height: 420px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .scroll-indicator {
+        opacity: 0.65;
+    }
+
+    .scroll-indicator-wheel,
+    .scroll-indicator-arrow {
+        animation: none;
+    }
+
+    .hero-section {
+        background-attachment: scroll;
+    }
+}
+

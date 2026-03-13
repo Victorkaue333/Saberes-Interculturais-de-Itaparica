@@ -1,0 +1,51 @@
+﻿.project-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.timeline-grid {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.territorio-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.knowledge-grid {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.masonry-grid {
+    columns: 1;
+    column-gap: 1rem;
+}
+
+.publication-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.team-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.institution-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.footer-main {
+    display: grid;
+    gap: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+

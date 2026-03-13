@@ -1,0 +1,16 @@
+﻿.eyebrow {
+    margin-bottom: 0.45rem;
+    color: var(--accent-strong);
+    font: 700 0.74rem var(--font-ui);
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: var(--ink-900);
+    font-family: var(--font-heading);
+    font-size: clamp(1.95rem, 4.8vw, 3rem);
+    line-height: 1.06;
+}
+

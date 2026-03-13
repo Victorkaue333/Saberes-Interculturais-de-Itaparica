@@ -1,0 +1,61 @@
+﻿.section-contact {
+    padding-bottom: 5.2rem;
+}
+
+.contact-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-card h2 {
+    margin-bottom: 0.65rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.9rem, 4.4vw, 2.6rem);
+    line-height: 1.05;
+}
+
+.contact-list {
+    margin: 1rem 0 1.1rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: var(--ink-700);
+}
+
+.contact-list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-strong);
+    margin-top: 0.15rem;
+}
+
+.contact-secondary {
+    background: linear-gradient(165deg, #fff, #fbf3e7);
+}
+
+.quick-links {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.quick-links a {
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.75rem;
+    color: var(--ink-700);
+    font: 600 0.83rem var(--font-ui);
+    transition: all var(--transition);
+}
+
+.quick-links a:hover {
+    border-color: rgba(183, 90, 49, 0.4);
+    color: var(--accent-strong);
+    background: rgba(183, 90, 49, 0.08);
+}
+

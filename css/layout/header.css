@@ -1,0 +1,103 @@
+﻿.site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1030;
+    padding: 0.75rem 0;
+}
+
+.nav-shell {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    background: rgba(45, 30, 20, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+    padding: 0.7rem 1rem;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.site-header.scrolled .nav-shell {
+    transform: translateY(-2px);
+    background: rgba(45, 30, 20, 0.68);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+    font-family: var(--font-ui);
+}
+
+.brand-icon {
+    color: var(--accent-soft);
+    font-size: 1rem;
+}
+
+.brand-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.brand-copy strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.brand-copy small {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(183, 90, 49, 0.4);
+}
+
+.nav-center {
+    gap: 0.15rem;
+    padding-top: 1rem;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.88);
+    font: 600 0.89rem var(--font-ui);
+    letter-spacing: 0.02em;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition), background var(--transition);
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0.35rem;
+    height: 2px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    transform: scaleX(1);
+}
+
