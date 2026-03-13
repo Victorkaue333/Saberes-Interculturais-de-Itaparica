@@ -37,6 +37,8 @@ O projeto foi desenvolvido no âmbito do **Instituto Federal do Sertão Pernambu
 
 ## 6. 📁 Estrutura do projeto
 
+A estrutura do projeto é organizada para facilitar a manutenção e escalabilidade, seguindo boas práticas de organização de arquivos e modularização de código. Abaixo está a hierarquia de arquivos e pastas:
+
 ```
 saberes-interculturais-itaparica/
 |-- index.html
