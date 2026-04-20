@@ -1,4 +1,29 @@
-﻿.eyebrow {
+/* Typography & Color Overrides - Pro Max */
+
+body, 
+.text-body,
+p, 
+ul, 
+ol, 
+li, 
+span, 
+div, 
+a {
+    color: var(--ink-700);
+}
+
+h1, h2, h3, h4, h5, h6, 
+.text-heading,
+strong, 
+b {
+    color: var(--ink-900);
+}
+
+.text-muted {
+    color: var(--ink-500) !important;
+}
+
+.eyebrow {
     margin-bottom: 0.45rem;
     color: var(--accent-strong);
     font: 700 0.74rem var(--font-ui);
@@ -8,7 +33,6 @@
 
 .section-heading h2 {
     margin: 0;
-    color: var(--ink-900);
     font-family: var(--font-heading);
     font-size: clamp(1.95rem, 4.8vw, 3rem);
     line-height: 1.06;

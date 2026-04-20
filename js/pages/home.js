@@ -18,37 +18,6 @@ function initIcons() {
     }
 }
 
-function initRevealElements(prefersReducedMotion) {
-    const revealElements = qsa(".reveal");
-    if (!revealElements.length) {
-        return;
-    }
-
-    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-        revealElements.forEach((element) => element.classList.add("is-visible"));
-        return;
-    }
-
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                    return;
-                }
-
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            });
-        },
-        {
-            threshold: 0.16,
-            rootMargin: "0px 0px -10% 0px"
-        }
-    );
-
-    revealElements.forEach((element) => revealObserver.observe(element));
-}
-
 function initCitationCopy() {
     qsa(".copy-citation").forEach((button) => {
         const defaultLabel = button.textContent || "Copiar citação";
@@ -228,7 +197,6 @@ function initCommunityMap() {
 export function initHomePage({ prefersReducedMotion = false } = {}) {
     initCurrentYear();
     initIcons();
-    initRevealElements(prefersReducedMotion);
     initCitationCopy();
     initCommunityMap();
 }

@@ -11,8 +11,107 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@500;600;700&family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: #0c0a09;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        #preloader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .preloader-shell {
+            text-align: center;
+            width: 100%;
+            max-width: 320px;
+            padding: 2rem;
+        }
+        .preloader-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .preloader-logo {
+            width: 48px;
+            height: 48px;
+            color: #c15c31;
+            margin-bottom: 0.5rem;
+        }
+        .preloader-name {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.5rem;
+            color: #f4ede1;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .preloader-progress-wrap {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .preloader-bar {
+            width: 100%;
+            height: 2px;
+            background: rgba(244, 237, 225, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+        .preloader-bar-fill {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            background: #c15c31;
+            box-shadow: 0 0 15px rgba(193, 92, 49, 0.5);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        .preloader-counter {
+            display: block;
+            margin-top: 0.75rem;
+            font-family: "Manrope", sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: #a89a8e;
+            letter-spacing: 0.1em;
+        }
+        .preloader-quote {
+            margin-top: 2rem;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #665c54;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .preloader-quote.show {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
+    <div id="preloader">
+        <div class="preloader-shell">
+            <div class="preloader-brand">
+                <svg class="preloader-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/><path d="M8 15h6"/></svg>
+                <span class="preloader-name">Saberes Interculturais</span>
+            </div>
+            <div class="preloader-progress-wrap">
+                <div class="preloader-bar">
+                    <div class="preloader-bar-fill" id="preloaderBar"></div>
+                </div>
+                <span class="preloader-counter" id="preloaderCounter">0%</span>
+            </div>
+            <p class="preloader-quote" id="preloaderQuote"></p>
+        </div>
+    </div>
 
     <!--  ===================== -->
     <!--  ====== Nav Bar ====== -->
@@ -51,8 +150,12 @@
     <!--  ========================== -->
     <main>
         <section id="home" class="hero-section">
+            <div class="hero-bg-container" aria-hidden="true" id="heroBgContainer">
+                <div class="hero-bg-image" id="heroBg"></div>
+            </div>
             <div class="hero-overlay" aria-hidden="true"></div>
-            <div class="container-xl hero-content reveal">
+            <div class="container-xl hero-content">
+                <span class="hero-kicker">Pesquisa Intercultural</span>
                 <h1>Saberes Interculturais dos Povos Indígenas de Itaparica</h1>
                 <p class="hero-lead">Uma pesquisa sobre práticas corporais, cultura e memória da comunidade indígena no território de Itacuruba, Pernambuco.</p>
                 <div class="hero-actions">
@@ -423,6 +526,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- GSAP for Pro Max Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
     <script id="saberes-main-module" type="module" src="js/main.js"></script>
 </body>
 </html>

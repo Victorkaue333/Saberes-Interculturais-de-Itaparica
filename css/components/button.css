@@ -1,109 +1,117 @@
-﻿.btn-article {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: linear-gradient(135deg, var(--accent), #cf7b4f);
-    color: #fff;
-    padding: 0.65rem 1.2rem;
-    border-radius: 999px;
-    font: 700 0.82rem var(--font-ui);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.btn-article:hover {
-    color: #fff;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 18px rgba(183, 90, 49, 0.4);
-}
-
+/* Pro Max Buttons - Heritage Earth Theme */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    font: 700 0.84rem var(--font-ui);
-    letter-spacing: 0.04em;
+    font: 700 0.85rem var(--font-ui);
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    padding: 0.75rem 1.35rem;
+    padding: 1rem 2rem;
     border: 1px solid transparent;
-    transition: transform var(--transition), box-shadow var(--transition), color var(--transition), background var(--transition), border var(--transition);
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .btn-primary-custom {
-    background: linear-gradient(135deg, var(--accent), #d37f52);
+    background: var(--accent);
     color: #fff;
-    box-shadow: 0 10px 18px rgba(183, 90, 49, 0.35);
+    box-shadow: 0 8px 24px rgba(193, 92, 49, 0.3);
 }
 
 .btn-primary-custom:hover {
-    color: #fff;
+    background: var(--accent-strong);
+    box-shadow: 0 12px 32px rgba(193, 92, 49, 0.45);
     transform: translateY(-2px);
-    box-shadow: 0 14px 20px rgba(183, 90, 49, 0.44);
 }
 
 .btn-outline-custom {
-    border-color: rgba(255, 255, 255, 0.48);
-    color: #fff;
-    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--line-strong);
+    color: var(--ink-900);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
 }
 
 .btn-outline-custom:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.72);
+    border-color: var(--accent);
+    background: rgba(193, 92, 49, 0.08);
+    color: var(--accent-strong);
+    transform: translateY(-2px);
 }
 
 .btn-sm-custom {
-    padding: 0.6rem 1.05rem;
-    font-size: 0.75rem;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.72rem;
 }
 
-.knowledge-toggle {
+/* Specific Article Button for Header/Hero */
+.btn-article {
+    background: var(--accent);
+    color: #fff;
     border: none;
-    background: none;
-    color: var(--accent-strong);
-    font: 700 0.76rem var(--font-ui);
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    cursor: pointer;
+    box-shadow: var(--accent-glow);
 }
 
-.knowledge-toggle:hover {
-    color: var(--accent);
+.btn-article:hover {
+    background: var(--accent-strong);
+    box-shadow: 0 10px 20px rgba(193, 92, 49, 0.4);
 }
 
 .back-to-top {
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    width: 42px;
-    height: 42px;
-    border: none;
+    right: 2rem;
+    bottom: 2rem;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     display: grid;
     place-items: center;
     color: #fff;
     background: var(--accent);
-    box-shadow: 0 9px 20px rgba(183, 90, 49, 0.4);
+    border: 1px solid var(--accent-strong);
+    box-shadow: var(--accent-glow);
     z-index: 1020;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
-    transition: all var(--transition);
+    transform: scale(0.8) translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .back-to-top.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: scale(1) translateY(0);
 }
 
 .back-to-top:hover {
     background: var(--accent-strong);
+    transform: scale(1.1) rotate(5deg);
 }
 
 .back-to-top svg {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
 }
 
+/* Knowledge Card Toggle (Inside Cards) */
+.knowledge-toggle {
+    margin-top: 1.5rem;
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius-sm);
+    color: var(--ink-700);
+    font: 700 0.72rem var(--font-ui);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.knowledge-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(193, 92, 49, 0.05);
+}

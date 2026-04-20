@@ -1,11 +1,11 @@
-﻿.reveal {
+.reveal {
     opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 500ms ease, transform 500ms ease;
+    visibility: hidden;
+    transform: translateY(20px);
 }
 
 .reveal.is-visible {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
 }
-

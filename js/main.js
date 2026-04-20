@@ -3,10 +3,12 @@ import { initMenu } from "./components/menu.js";
 import { initLightbox } from "./components/modal.js";
 import { initContatoPage } from "./pages/contato.js";
 import { initHomePage } from "./pages/home.js";
+import { Animations } from "./core/animations.js";
 
 function bootstrap() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+    Animations.init();
     initMenu({ prefersReducedMotion });
     initKnowledgeAccordion();
     initLightbox();
